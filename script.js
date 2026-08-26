@@ -1,492 +1,217 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+const players = [
+  {
+    name:"absol",
+    team:"ZETA DIVISION",
+    country:"Japan",
+    role:"Duelist",
+    dpi:800,
+    sens:0.22,
+    mouse:"Logicool G PRO X SUPERLIGHT 2",
+    mouseLink:"https://link.amazon/B06kH5b1r",
+    mousepad:"Nachoneko × ふもコレ"
+  },
+
+  {
+    name:"Meiy",
+    team:"DetonatioN FocusMe",
+    country:"Japan",
+    role:"Duelist",
+    dpi:800,
+    sens:0.173,
+    mouse:"Razer Viper V3 Pro",
+    mouseLink:"https://link.amazon/B02B5we6v",
+    mousepad:"meiy glasspad"
+  },
+
+  {
+    name:"SSeeS",
+    team:"DetonatioN FocusMe",
+    country:"Japan",
+    role:"Controller",
+    dpi:800,
+    sens:0.211,
+    mouse:"WLMOUSE Beast X Max",
+    mouseLink:"https://link.amazon/B0h4S0qSv",
+    mousepad:"ARTISAN Hien Otsu V2"
+  }
+];
 
 
-body {
-
-  font-family:
-    Arial,
-    "Noto Sans JP",
-    sans-serif;
-
-  background:
-    #0b0d12;
-
-  color:
-    #ffffff;
-
-  min-height:100vh;
-
-}
-
-
-
-header {
-
-  text-align:center;
-
-  padding:40px 20px;
-
-  border-bottom:
-  1px solid #222;
-
-}
-
-
-
-header h1 {
-
-  font-size:32px;
-
-  margin-bottom:10px;
-
+function getEDPI(player){
+  return player.dpi * player.sens;
 }
 
 
 
-header p {
+function renderPlayers(list){
 
-  color:#aaa;
+ const box=document.getElementById("playerList");
 
-}
+ if(!box)return;
 
+ box.innerHTML="";
 
-
-
-main {
-
-  width:90%;
-
-  max-width:1200px;
-
-  margin:30px auto;
-
-}
+ document.getElementById("resultCount").textContent =
+ `${list.length}人`;
 
 
+ list.forEach(player=>{
+
+  const card=document.createElement("div");
+
+  card.className="player-card";
+
+  card.onclick=()=>{
+    showPlayerDetail(player.name);
+  };
 
 
-.search-area {
+  card.innerHTML=`
 
-  display:flex;
+  <div class="player-name">
+  ${player.name}
+  </div>
 
-  flex-wrap:wrap;
+  <div>
+  ${player.team}
+  </div>
 
-  gap:12px;
+  <p>
+  eDPI ${getEDPI(player).toFixed(1)}
+  </p>
 
-  margin-bottom:20px;
-
-}
-
-
-
-
-input,
-select,
-button {
+  `;
 
 
-  background:#151922;
+  box.appendChild(card);
 
-  color:white;
-
-  border:
-
-  1px solid #333;
-
-  border-radius:8px;
-
-  padding:12px;
-
-  font-size:14px;
-
+ });
 
 }
 
 
 
 
-input {
+function showPlayerDetail(name){
 
-  flex:1;
+ const player =
+ players.find(p=>p.name===name);
 
-  min-width:220px;
 
-}
+ const list=document.getElementById("playerList");
+ const detail=document.getElementById("playerDetail");
 
 
+ list.style.display="none";
 
-button {
+ detail.classList.remove("hidden");
 
-  cursor:pointer;
 
-}
+ let mouseHTML=player.mouse;
 
 
+ if(player.mouseLink){
 
-button:hover {
+ mouseHTML+=`
 
-  opacity:.8;
+ <br>
 
-}
+ <a class="amazon-button"
+ href="${player.mouseLink}"
+ target="_blank">
 
+ Amazonで見る ↗
 
+ </a>
 
+ `;
 
-.count {
+ }
 
-  margin-bottom:15px;
 
-  color:#aaa;
+ detail.innerHTML=`
 
-}
+ <h2>${player.name}</h2>
 
+ <p>${player.team}</p>
 
 
-#resultCount {
+ <hr>
 
-  color:white;
 
-  font-weight:bold;
+ <p>
+ ROLE : ${player.role}
+ </p>
 
-}
 
+ <p>
+ DPI : ${player.dpi}
+ </p>
 
 
+ <p>
+ SENS : ${player.sens}
+ </p>
 
-.player-list {
 
-  display:grid;
+ <p>
+ eDPI : ${getEDPI(player).toFixed(1)}
+ </p>
 
-  grid-template-columns:
 
-  repeat(auto-fit,minmax(260px,1fr));
 
-  gap:20px;
+ <p>
+ MOUSE
+ </p>
 
-}
+ <p>
+ ${mouseHTML}
+ </p>
 
 
 
+ <p>
+ MOUSE PAD
+ </p>
 
-.player-card {
+ <p>
+ ${player.mousepad}
+ </p>
 
 
-  background:#151922;
 
+ <button onclick="closePlayerDetail()">
 
-  border:
+ ← プロ一覧に戻る
 
-  1px solid #252b38;
+ </button>
 
 
-  border-radius:14px;
-
-
-  padding:20px;
-
-
-  cursor:pointer;
-
-
-  transition:.2s;
-
-
-}
-
-
-
-.player-card:hover {
-
-  transform:translateY(-5px);
-
-  border-color:#ff4655;
-
-}
-
-
-
-
-.player-name {
-
-  font-size:24px;
-
-  font-weight:bold;
-
-}
-
-
-
-.player-team {
-
-  color:#aaa;
-
-  margin:8px 0 20px;
+ `;
 
 }
 
 
 
 
-.player-info {
+function closePlayerDetail(){
+
+ document.getElementById("playerDetail")
+ .classList.add("hidden");
 
 
-  display:grid;
-
-  gap:10px;
-
-
-}
-
-
-
-
-.stat {
-
-
-  display:flex;
-
-  justify-content:space-between;
-
-
-  background:#0f1219;
-
-
-  padding:10px;
-
-
-  border-radius:8px;
-
-
-}
-
-
-
-.stat-label {
-
-  color:#888;
-
-}
-
-
-
-.stat-value {
-
-  font-weight:bold;
+ document.getElementById("playerList")
+ .style.display="grid";
 
 }
 
 
 
 
+document.addEventListener(
+"DOMContentLoaded",
+()=>{
 
-.hidden {
+ renderPlayers(players);
 
-  display:none;
-
-}
-
-
-
-
-.detail-header {
-
-  text-align:center;
-
-  margin-bottom:30px;
-
-}
-
-
-
-.detail-name {
-
-  font-size:36px;
-
-  font-weight:bold;
-
-}
-
-
-
-.detail-team {
-
-  color:#aaa;
-
-}
-
-
-
-.detail-section {
-
-
-  margin-bottom:25px;
-
-
-}
-
-
-
-.detail-section h3 {
-
-
-  margin-bottom:15px;
-
-
-}
-
-
-
-
-.detail-grid {
-
-
-  display:grid;
-
-
-  grid-template-columns:
-
-  repeat(auto-fit,minmax(200px,1fr));
-
-
-  gap:15px;
-
-
-}
-
-
-
-
-.amazon-button {
-
-
-  display:inline-block;
-
-
-  margin-top:8px;
-
-
-  padding:8px 14px;
-
-
-  background:#ff9900;
-
-
-  color:#000;
-
-
-  border-radius:6px;
-
-
-  text-decoration:none;
-
-
-  font-weight:bold;
-
-
-}
-
-
-
-
-.back-button {
-
-
-  margin-top:20px;
-
-
-  width:100%;
-
-
-  background:#ff4655;
-
-
-}
-
-
-
-
-.edpi-calculator {
-
-
-  margin-top:50px;
-
-
-  padding:25px;
-
-
-  background:#151922;
-
-
-  border-radius:14px;
-
-
-}
-
-
-
-.edpi-calculator h2 {
-
-
-  margin-bottom:20px;
-
-
-}
-
-
-
-
-
-footer {
-
-
-  text-align:center;
-
-
-  padding:30px;
-
-
-  color:#777;
-
-
-}
-
-
-
-footer a {
-
-
-  color:#aaa;
-
-
-  margin:0 10px;
-
-
-}
-
-
-
-
-
-@media(max-width:600px){
-
-
-header h1{
-
-font-size:24px;
-
-}
-
-
-
-.detail-name{
-
-font-size:28px;
-
-}
-
-
-}
+});
