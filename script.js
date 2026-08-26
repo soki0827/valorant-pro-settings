@@ -205,21 +205,30 @@ const players = [
   // =========================
 
   {
-    name: "gyen",
-    team: "RIDDLE ORDER",
-    region: "Pacific",
-    country: "Japan",
-    role: "Sentinel",
-    dpi: 1000,
-    sens: 0.33,
-
-    // G PRO X2 → 統一
-    mouse: "Logicool G PRO X SUPERLIGHT 2",
-    mouseLink: "https://link.amazon/B06kH5b1r",
-
-    mousepad: "G-SR-SE ROUGE",
-  },
-
+    {
+  name: "gyen",
+  team: "RIDDLE ORDER",
+  region: "Pacific",
+  country: "Japan",
+  role: "Sentinel",
+  dpi: 1000,
+  sens: 0.33,
+  mouse: "Logicool G PRO X SUPERLIGHT 2",
+  mouseLink: "https://link.amazon/B06kH5b1r",
+  mousepad: "G-SR-SE ROUGE",
+},
+{
+  name: "joxjo",
+  team: "RIDDLE ORDER",
+  region: "Pacific",
+  country: "Japan",
+  role: "Initiator",
+  dpi: 800,
+  sens: 0.355,
+  mouse: "Logicool G PRO X SUPERLIGHT 2",
+  mouseLink: "https://link.amazon/B06kH5b1r",
+  mousepad: "ARTISAN Hien FX XL",
+},
   {
     name: "joxjo",
     team: "RIDDLE ORDER",
