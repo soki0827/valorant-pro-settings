@@ -1,82 +1,153 @@
 const players = [
 
   // =========================
-  // ZETA DIVISION
+  // DETONATION FOCUSME
   // =========================
 
   {
-    name: "absol",
-    team: "ZETA DIVISION",
-    region: "Pacific",
-    country: "Japan",
-    role: "Duelist",
-    dpi: 800,
-    sens: 0.22,
-    mouse: "Logicool G PRO X SUPERLIGHT 2",
-    mouseLink: "https://link.amazon/B06kH5b1r",
-    mousepad: "Nachoneko × ふもコレ",
-  },
-
-  {
-    name: "eko",
-    team: "ZETA DIVISION",
-    region: "Pacific",
-    country: "Japan",
-    role: "Flex",
-    dpi: 800,
-    sens: 0.27,
-    mouse: "Razer Viper V3 Pro",
-    mouseLink: "https://link.amazon/B02B5we6v",
-    mousepad: "ARTISAN NINJA FX Zero",
-  },
-
-  {
-    name: "Laz",
-    team: "ZETA DIVISION",
-    region: "Pacific",
-    country: "Japan",
-    role: "未登録",
-    dpi: 1600,
-    sens: 0.136,
-    mouse: "未登録",
-    mousepad: "未登録",
-  },
-
-  {
-    name: "SyouTa",
-    team: "ZETA DIVISION",
-    region: "Pacific",
-    country: "Japan",
-    role: "Flex",
-    dpi: 800,
-    sens: 0.4,
-    mouse: "未登録",
-    mousepad: "未登録",
-  },
-
-  {
-    name: "SugarZ3ro",
-    team: "ZETA DIVISION",
-    region: "Pacific",
-    country: "Japan",
-    role: "Controller",
-    dpi: 800,
-    sens: 0.225,
-    mouse: "未登録",
-    mousepad: "未登録",
-  },
-
-  {
-    name: "xdll",
-    team: "ZETA DIVISION",
+    name: "Akame",
+    team: "DetonatioN FocusMe",
     region: "Pacific",
     country: "Japan",
     role: "Initiator",
     dpi: 800,
-    sens: 0.175,
+    sens: 0.185,
+    mouse: "LAMZU Maya X Light Pink",
+    mouseLink: "https://link.amazon/B0ctMUcku",
+    mousepad: "ARTISAN NINJA FX 99式 SOFT"
+  },
+
+  {
+    name: "Caedye",
+    team: "DetonatioN FocusMe",
+    region: "Pacific",
+    country: "Japan",
+    role: "Sentinel",
+    dpi: 400,
+    sens: 0.35,
     mouse: "Razer Viper V4 Pro",
     mouseLink: "https://link.amazon/B0gImS1eE",
-    mousepad: "Pulsar eS Saturn Pro",
+    mousepad: "ARTISAN NINJA FX Zero"
+  },
+
+  {
+    name: "Meiy",
+    team: "DetonatioN FocusMe",
+    region: "Pacific",
+    country: "Japan",
+    role: "Duelist",
+    dpi: 800,
+    sens: 0.173,
+    mouse: "Razer Viper V3 Pro",
+    mouseLink: "https://link.amazon/B02B5we6v",
+    mousepad: "meiy glasspad"
+  },
+
+  {
+    name: "SSeeS",
+    team: "DetonatioN FocusMe",
+    region: "Pacific",
+    country: "Japan",
+    role: "Controller",
+    dpi: 800,
+    sens: 0.211,
+    mouse: "WLMOUSE Beast X Max",
+    mouseLink: "https://link.amazon/B0bpdmtk7",
+    mousepad: "ARTISAN NINJA FX Hayate Otsu V2"
+  },
+
+  {
+    name: "Yatsuka",
+    team: "DetonatioN FocusMe",
+    region: "Pacific",
+    country: "Japan",
+    role: "Duelist",
+    dpi: 1600,
+    sens: 0.08,
+    mouse: "Finalmouse UltralightX",
+    mousepad: "WALLHACK SP-004 Hatsune Miku"
+  },
+
+
+  // =========================
+  // DELIGHT
+  // =========================
+
+  {
+    name: "Airy",
+    team: "Delight",
+    region: "Pacific",
+    country: "Japan",
+    role: "未登録",
+    dpi: 1600,
+    sens: 0.1,
+    mouse: "Razer Viper V3 Pro",
+    mousepad: "未登録"
+  },
+
+  {
+    name: "daydus",
+    team: "Delight",
+    region: "Pacific",
+    country: "Japan",
+    role: "未登録",
+    dpi: 1600,
+    sens: 0.1,
+    mouse: "未登録",
+    mousepad: "未登録"
+  },
+
+  {
+    name: "fukukeN",
+    team: "Delight",
+    region: "Pacific",
+    country: "Japan",
+    role: "未登録",
+    dpi: null,
+    sens: null,
+    mouse: "未登録",
+    mousepad: "未登録"
+  },
+
+  {
+    name: "Hands",
+    team: "Delight",
+    region: "Pacific",
+    country: "Japan",
+    role: "未登録",
+    dpi: null,
+    sens: null,
+    mouse: "未登録",
+    mousepad: "未登録"
+  },
+
+  {
+    name: "Mametu",
+    team: "Delight",
+    region: "Pacific",
+    country: "Japan",
+    role: "未登録",
+    dpi: 800,
+    sens: 0.2,
+    mouse: "Logicool G PRO X SUPERLIGHT 2",
+    mousepad: "ARTISAN 零 FX SOFT 橙XL"
+  },
+
+
+  // =========================
+  // EX DELIGHT AC
+  // =========================
+
+  {
+    name: "winnable",
+    team: "ex Delight AC",
+    region: "Pacific",
+    country: "Japan",
+    role: "未登録",
+    dpi: 800,
+    sens: 0.58,
+    mouse: "未登録",
+    mousepad: "未登録"
   },
 
 
@@ -93,7 +164,7 @@ const players = [
     dpi: 800,
     sens: 0.45,
     mouse: "未登録",
-    mousepad: "未登録",
+    mousepad: "未登録"
   },
 
 
@@ -110,93 +181,7 @@ const players = [
     dpi: 800,
     sens: 0.58,
     mouse: "未登録",
-    mousepad: "未登録",
-  },
-
-
-  // =========================
-  // SENTINELS
-  // =========================
-
-  {
-    name: "TenZ",
-    team: "Sentinels",
-    region: "Americas",
-    country: "Canada",
-    role: "Flex",
-    dpi: 800,
-    sens: 0.22,
-    mouse: "未登録",
-    mousepad: "未登録",
-  },
-
-
-  // =========================
-  // DETONATION FOCUSME
-  // =========================
-
-  {
-    name: "Akame",
-    team: "DetonatioN FocusMe",
-    region: "Pacific",
-    country: "Japan",
-    role: "Initiator",
-    dpi: 800,
-    sens: 0.185,
-    mouse: "LAMZU Maya X Light Pink",
-    mouseLink: "https://link.amazon/B0ctMUcku",
-    mousepad: "ARTISAN NINJA FX 99式 SOFT",
-  },
-
-  {
-    name: "Caedye",
-    team: "DetonatioN FocusMe",
-    region: "Pacific",
-    country: "Japan",
-    role: "Sentinel",
-    dpi: 400,
-    sens: 0.35,
-    mouse: "Razer Viper V4 Pro",
-    mouseLink: "https://link.amazon/B0gImS1eE",
-    mousepad: "ARTISAN NINJA FX Zero",
-  },
-
-  {
-    name: "Meiy",
-    team: "DetonatioN FocusMe",
-    region: "Pacific",
-    country: "Japan",
-    role: "Duelist",
-    dpi: 800,
-    sens: 0.173,
-    mouse: "Razer Viper V3 Pro",
-    mouseLink: "https://link.amazon/B02B5we6v",
-    mousepad: "meiy glasspad",
-  },
-
-  {
-    name: "SSeeS",
-    team: "DetonatioN FocusMe",
-    region: "Pacific",
-    country: "Japan",
-    role: "Controller",
-    dpi: 800,
-    sens: 0.211,
-    mouse: "WLMOUSE Beast X Max",
-    mouseLink: "https://link.amazon/B0bpdmtk7",
-    mousepad: "ARTISAN NINJA FX Hayate Otsu V2",
-  },
-
-  {
-    name: "Yatsuka",
-    team: "DetonatioN FocusMe",
-    region: "Pacific",
-    country: "Japan",
-    role: "Duelist",
-    dpi: 1600,
-    sens: 0.08,
-    mouse: "Finalmouse UltralightX",
-    mousepad: "WALLHACK SP-004 Hatsune Miku",
+    mousepad: "未登録"
   },
 
 
@@ -213,7 +198,7 @@ const players = [
     dpi: 1000,
     sens: 0.33,
     mouse: "G PRO X2",
-    mousepad: "G-SR-SE ROUGE",
+    mousepad: "G-SR-SE ROUGE"
   },
 
   {
@@ -225,7 +210,7 @@ const players = [
     dpi: 800,
     sens: 0.355,
     mouse: "G PRO X2",
-    mousepad: "ARTISAN Hien FX XL",
+    mousepad: "ARTISAN Hien FX XL"
   },
 
   {
@@ -237,7 +222,7 @@ const players = [
     dpi: 1600,
     sens: 0.08,
     mouse: "未登録",
-    mousepad: "未登録",
+    mousepad: "未登録"
   },
 
   {
@@ -250,92 +235,119 @@ const players = [
     sens: 0.13,
     mouse: "G PRO X SUPERLIGHT 2",
     mousepad: "ARTISAN 零 NINJA FX SOFT",
-    scopedSens: 1.09,
+    scopedSens: 1.09
   },
 
   {
     name: "Seoldam",
     team: "RIDDLE ORDER",
     region: "Pacific",
-    country: "Japan",
+    country: "South Korea",
     role: "Duelist",
     dpi: 1600,
     sens: 0.14,
     mouse: "G PRO X SUPERLIGHT",
-    mousepad: "Pulsar Saturn Pro Red Soft",
+    mousepad: "Pulsar Saturn Pro Red Soft"
   },
 
- {
-    name: "Airy",
-    team: "Delight",
-    region: "Pacific",
-    country: "Japan",
-    role: "未登録",
-    dpi: 1600,
-    sens: 0.1,
-    mouse: "Razer Viper V3 Pro",
-    mousepad: "未登録",
-  },
+
+  // =========================
+  // SENTINELS
+  // =========================
 
   {
-    name: "daydus",
-    team: "Delight",
-    region: "Pacific",
-    country: "Japan",
-    role: "未登録",
-    dpi: 1600,
-    sens: 0.1,
-    mouse: "未登録",
-    mousepad: "未登録",
-  },
-
-  {
-    name: "fukukeN",
-    team: "Delight",
-    region: "Pacific",
-    country: "Japan",
-    role: "未登録",
-    dpi: 0,
-    sens: 0,
-    mouse: "未登録",
-    mousepad: "未登録",
-  },
-
-  {
-    name: "Hands",
-    team: "Delight",
-    region: "Pacific",
-    country: "Japan",
-    role: "未登録",
-    dpi: 0,
-    sens: 0,
-    mouse: "未登録",
-    mousepad: "未登録",
-  },
-
-  {
-    name: "Mametu",
-    team: "Delight",
-    region: "Pacific",
-    country: "Japan",
-    role: "未登録",
+    name: "TenZ",
+    team: "Sentinels",
+    region: "Americas",
+    country: "Canada",
+    role: "Flex",
     dpi: 800,
-    sens: 0.2,
+    sens: 0.22,
+    mouse: "未登録",
+    mousepad: "未登録"
+  },
+
+
+  // =========================
+  // ZETA DIVISION
+  // =========================
+
+  {
+    name: "absol",
+    team: "ZETA DIVISION",
+    region: "Pacific",
+    country: "Japan",
+    role: "Duelist",
+    dpi: 800,
+    sens: 0.22,
     mouse: "Logicool G PRO X SUPERLIGHT 2",
-    mousepad: "ARTISAN 零 FX SOFT 橙XL",
+    mouseLink: "https://link.amazon/B06kH5b1r",
+    mousepad: "Nachoneko × ふもコレ"
   },
- {
-    name: "winnable",
-    team: "ex Delight AC",
+
+  {
+    name: "eko",
+    team: "ZETA DIVISION",
+    region: "Pacific",
+    country: "Japan",
+    role: "Flex",
+    dpi: 800,
+    sens: 0.27,
+    mouse: "Razer Viper V3 Pro",
+    mouseLink: "https://link.amazon/B02B5we6v",
+    mousepad: "ARTISAN NINJA FX Zero"
+  },
+
+  {
+    name: "Laz",
+    team: "ZETA DIVISION",
     region: "Pacific",
     country: "Japan",
     role: "未登録",
-    dpi: 800,
-    sens: 0.58,
+    dpi: 1600,
+    sens: 0.136,
     mouse: "未登録",
-    mousepad: "未登録",
+    mousepad: "未登録"
   },
-]
+
+  {
+    name: "SugarZ3ro",
+    team: "ZETA DIVISION",
+    region: "Pacific",
+    country: "Japan",
+    role: "Controller",
+    dpi: 800,
+    sens: 0.225,
+    mouse: "未登録",
+    mousepad: "未登録"
+  },
+
+  {
+    name: "SyouTa",
+    team: "ZETA DIVISION",
+    region: "Pacific",
+    country: "Japan",
+    role: "Flex",
+    dpi: 800,
+    sens: 0.4,
+    mouse: "未登録",
+    mousepad: "未登録"
+  },
+
+  {
+    name: "xdll",
+    team: "ZETA DIVISION",
+    region: "Pacific",
+    country: "Japan",
+    role: "Initiator",
+    dpi: 800,
+    sens: 0.175,
+    mouse: "Razer Viper V4 Pro",
+    mouseLink: "https://link.amazon/B0gImS1eE",
+    mousepad: "Pulsar eS Saturn Pro"
+  }
+
+];
 
 
 // =========================
@@ -343,6 +355,14 @@ const players = [
 // =========================
 
 function getEDPI(player) {
+
+  if (
+    player.dpi === null ||
+    player.sens === null
+  ) {
+    return null;
+  }
+
   return player.dpi * player.sens;
 }
 
@@ -353,29 +373,53 @@ function getEDPI(player) {
 
 function renderPlayers(list) {
 
-  const container = document.getElementById("playerList");
+  const container =
+    document.getElementById("playerList");
 
   if (!container) return;
 
   container.innerHTML = "";
 
-  const resultCount = document.getElementById("resultCount");
+  const resultCount =
+    document.getElementById("resultCount");
 
   if (resultCount) {
-    resultCount.textContent = `${list.length}人`;
+    resultCount.textContent =
+      `${list.length}人`;
   }
+
 
   list.forEach(player => {
 
-    const edpi = getEDPI(player);
+    const edpi =
+      getEDPI(player);
 
-    const card = document.createElement("div");
+    const card =
+      document.createElement("div");
 
-    card.className = "player-card";
+    card.className =
+      "player-card";
 
     card.onclick = () => {
       showPlayerDetail(player.name);
     };
+
+
+    const dpiText =
+      player.dpi === null
+        ? "未登録"
+        : player.dpi.toLocaleString();
+
+    const sensText =
+      player.sens === null
+        ? "未登録"
+        : player.sens;
+
+    const edpiText =
+      edpi === null
+        ? "未登録"
+        : edpi.toFixed(1);
+
 
     card.innerHTML = `
 
@@ -399,21 +443,21 @@ function renderPlayers(list) {
         <div class="stat">
           <span class="stat-label">DPI</span>
           <span class="stat-value">
-            ${player.dpi.toLocaleString()}
+            ${dpiText}
           </span>
         </div>
 
         <div class="stat">
           <span class="stat-label">SENS</span>
           <span class="stat-value">
-            ${player.sens}
+            ${sensText}
           </span>
         </div>
 
         <div class="stat">
           <span class="stat-label">eDPI</span>
           <span class="stat-value">
-            ${edpi.toFixed(1)}
+            ${edpiText}
           </span>
         </div>
 
@@ -434,37 +478,54 @@ function renderPlayers(list) {
 
 function filterPlayers() {
 
-  const searchInput = document.getElementById("searchInput");
-  const regionFilter = document.getElementById("regionFilter");
-  const countryFilter = document.getElementById("countryFilter");
-  const roleFilter = document.getElementById("roleFilter");
-  const edpiFilter = document.getElementById("edpiFilter");
-  const sensFilter = document.getElementById("sensFilter");
+  const searchInput =
+    document.getElementById("searchInput");
+
+  const regionFilter =
+    document.getElementById("regionFilter");
+
+  const countryFilter =
+    document.getElementById("countryFilter");
+
+  const roleFilter =
+    document.getElementById("roleFilter");
+
+  const edpiFilter =
+    document.getElementById("edpiFilter");
+
+  const sensFilter =
+    document.getElementById("sensFilter");
+
 
   const search =
     searchInput
       ? searchInput.value.toLowerCase()
       : "";
 
+
   const region =
     regionFilter
       ? regionFilter.value
       : "all";
+
 
   const country =
     countryFilter
       ? countryFilter.value
       : "all";
 
+
   const role =
     roleFilter
       ? roleFilter.value
       : "all";
 
+
   const edpiValue =
     edpiFilter
       ? edpiFilter.value
       : "all";
+
 
   const sensValue =
     sensFilter
@@ -472,86 +533,140 @@ function filterPlayers() {
       : "all";
 
 
-  const filtered = players.filter(player => {
+  const filtered =
+    players.filter(player => {
 
-    const edpi = getEDPI(player);
+      const edpi =
+        getEDPI(player);
 
-    const searchMatch =
-      player.name.toLowerCase().includes(search) ||
-      player.team.toLowerCase().includes(search);
 
-    const regionMatch =
-      region === "all" ||
-      player.region === region;
+      const searchMatch =
+        player.name
+          .toLowerCase()
+          .includes(search) ||
 
-    const countryMatch =
-      country === "all" ||
-      player.country === country;
+        player.team
+          .toLowerCase()
+          .includes(search);
 
-    const roleMatch =
-      role === "all" ||
-      player.role === role;
 
-    let edpiMatch = true;
+      const regionMatch =
+        region === "all" ||
+        player.region === region;
 
-    if (edpiValue === "low") {
-      edpiMatch =
-        edpi >= 100 &&
-        edpi < 200;
-    }
 
-    if (edpiValue === "mid") {
-      edpiMatch =
-        edpi >= 200 &&
-        edpi < 300;
-    }
+      const countryMatch =
+        country === "all" ||
+        player.country === country;
 
-    if (edpiValue === "high") {
-      edpiMatch =
-        edpi >= 300 &&
-        edpi < 400;
-    }
 
-    if (edpiValue === "veryhigh") {
-      edpiMatch =
-        edpi >= 400;
-    }
+      const roleMatch =
+        role === "all" ||
+        player.role === role;
 
-    let sensMatch = true;
 
-    if (sensValue === "low") {
-      sensMatch =
-        player.sens >= 0.10 &&
-        player.sens < 0.20;
-    }
+      let edpiMatch = true;
 
-    if (sensValue === "mid") {
-      sensMatch =
-        player.sens >= 0.20 &&
-        player.sens < 0.30;
-    }
 
-    if (sensValue === "high") {
-      sensMatch =
-        player.sens >= 0.30 &&
-        player.sens < 0.40;
-    }
+      if (
+        edpiValue !== "all" &&
+        edpi === null
+      ) {
+        edpiMatch = false;
+      }
 
-    if (sensValue === "veryhigh") {
-      sensMatch =
-        player.sens >= 0.40;
-    }
 
-    return (
-      searchMatch &&
-      regionMatch &&
-      countryMatch &&
-      roleMatch &&
-      edpiMatch &&
-      sensMatch
-    );
+      if (edpiValue === "low") {
 
-  });
+        edpiMatch =
+          edpi >= 100 &&
+          edpi < 200;
+
+      }
+
+
+      if (edpiValue === "mid") {
+
+        edpiMatch =
+          edpi >= 200 &&
+          edpi < 300;
+
+      }
+
+
+      if (edpiValue === "high") {
+
+        edpiMatch =
+          edpi >= 300 &&
+          edpi < 400;
+
+      }
+
+
+      if (edpiValue === "veryhigh") {
+
+        edpiMatch =
+          edpi >= 400;
+
+      }
+
+
+      let sensMatch = true;
+
+
+      if (
+        sensValue !== "all" &&
+        player.sens === null
+      ) {
+        sensMatch = false;
+      }
+
+
+      if (sensValue === "low") {
+
+        sensMatch =
+          player.sens >= 0.10 &&
+          player.sens < 0.20;
+
+      }
+
+
+      if (sensValue === "mid") {
+
+        sensMatch =
+          player.sens >= 0.20 &&
+          player.sens < 0.30;
+
+      }
+
+
+      if (sensValue === "high") {
+
+        sensMatch =
+          player.sens >= 0.30 &&
+          player.sens < 0.40;
+
+      }
+
+
+      if (sensValue === "veryhigh") {
+
+        sensMatch =
+          player.sens >= 0.40;
+
+      }
+
+
+      return (
+        searchMatch &&
+        regionMatch &&
+        countryMatch &&
+        roleMatch &&
+        edpiMatch &&
+        sensMatch
+      );
+
+    });
 
 
   renderPlayers(filtered);
@@ -583,9 +698,15 @@ function calculateEDPI() {
   const result =
     document.getElementById("edpiResult");
 
-  if (!dpiInput || !sensInput || !result) {
+
+  if (
+    !dpiInput ||
+    !sensInput ||
+    !result
+  ) {
     return;
   }
+
 
   const dpi =
     Number(dpiInput.value);
@@ -593,8 +714,10 @@ function calculateEDPI() {
   const sens =
     Number(sensInput.value);
 
+
   const edpi =
     dpi * sens;
+
 
   result.textContent =
     edpi.toFixed(1);
@@ -613,7 +736,9 @@ function showPlayerDetail(playerName) {
       p => p.name === playerName
     );
 
+
   if (!player) return;
+
 
   const list =
     document.getElementById("playerList");
@@ -621,17 +746,41 @@ function showPlayerDetail(playerName) {
   const detail =
     document.getElementById("playerDetail");
 
+
   if (!list || !detail) return;
 
-  list.style.display = "none";
 
-  detail.classList.remove("hidden");
+  list.style.display =
+    "none";
+
+
+  detail.classList.remove(
+    "hidden"
+  );
+
 
   const edpi =
     getEDPI(player);
 
 
-  // Amazonリンク
+  const dpiText =
+    player.dpi === null
+      ? "未登録"
+      : player.dpi.toLocaleString();
+
+
+  const sensText =
+    player.sens === null
+      ? "未登録"
+      : player.sens;
+
+
+  const edpiText =
+    edpi === null
+      ? "未登録"
+      : edpi.toFixed(1);
+
+
   let mouseHTML = `
     ${player.mouse}
   `;
@@ -680,31 +829,54 @@ function showPlayerDetail(playerName) {
       <div class="detail-grid">
 
         <div class="stat">
-          <span class="stat-label">ROLE</span>
+
+          <span class="stat-label">
+            ROLE
+          </span>
+
           <span class="stat-value">
             ${player.role}
           </span>
+
         </div>
 
-        <div class="stat">
-          <span class="stat-label">DPI</span>
-          <span class="stat-value">
-            ${player.dpi.toLocaleString()}
-          </span>
-        </div>
 
         <div class="stat">
-          <span class="stat-label">SENSITIVITY</span>
-          <span class="stat-value">
-            ${player.sens}
+
+          <span class="stat-label">
+            DPI
           </span>
+
+          <span class="stat-value">
+            ${dpiText}
+          </span>
+
         </div>
 
+
         <div class="stat">
-          <span class="stat-label">eDPI</span>
-          <span class="stat-value">
-            ${edpi.toFixed(1)}
+
+          <span class="stat-label">
+            SENSITIVITY
           </span>
+
+          <span class="stat-value">
+            ${sensText}
+          </span>
+
+        </div>
+
+
+        <div class="stat">
+
+          <span class="stat-label">
+            eDPI
+          </span>
+
+          <span class="stat-value">
+            ${edpiText}
+          </span>
+
         </div>
 
       </div>
@@ -772,11 +944,17 @@ function closePlayerDetail() {
   const detail =
     document.getElementById("playerDetail");
 
+
   if (!list || !detail) return;
 
-  detail.classList.add("hidden");
 
-  list.style.display = "grid";
+  detail.classList.add(
+    "hidden"
+  );
+
+
+  list.style.display =
+    "grid";
 
 }
 
@@ -785,74 +963,108 @@ function closePlayerDetail() {
 // イベント設定
 // =========================
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener(
+  "DOMContentLoaded",
+  () => {
 
-  const searchInput =
-    document.getElementById("searchInput");
+    const searchInput =
+      document.getElementById(
+        "searchInput"
+      );
 
-  if (searchInput) {
-    searchInput.addEventListener(
-      "input",
-      filterPlayers
-    );
+
+    if (searchInput) {
+
+      searchInput.addEventListener(
+        "input",
+        filterPlayers
+      );
+
+    }
+
+
+    const regionFilter =
+      document.getElementById(
+        "regionFilter"
+      );
+
+
+    if (regionFilter) {
+
+      regionFilter.addEventListener(
+        "change",
+        filterPlayers
+      );
+
+    }
+
+
+    const countryFilter =
+      document.getElementById(
+        "countryFilter"
+      );
+
+
+    if (countryFilter) {
+
+      countryFilter.addEventListener(
+        "change",
+        filterPlayers
+      );
+
+    }
+
+
+    const roleFilter =
+      document.getElementById(
+        "roleFilter"
+      );
+
+
+    if (roleFilter) {
+
+      roleFilter.addEventListener(
+        "change",
+        filterPlayers
+      );
+
+    }
+
+
+    const edpiFilter =
+      document.getElementById(
+        "edpiFilter"
+      );
+
+
+    if (edpiFilter) {
+
+      edpiFilter.addEventListener(
+        "change",
+        filterPlayers
+      );
+
+    }
+
+
+    const sensFilter =
+      document.getElementById(
+        "sensFilter"
+      );
+
+
+    if (sensFilter) {
+
+      sensFilter.addEventListener(
+        "change",
+        filterPlayers
+      );
+
+    }
+
+
+    // 最初に全選手を表示
+    renderPlayers(players);
+
   }
-
-
-  const regionFilter =
-    document.getElementById("regionFilter");
-
-  if (regionFilter) {
-    regionFilter.addEventListener(
-      "change",
-      filterPlayers
-    );
-  }
-
-
-  const countryFilter =
-    document.getElementById("countryFilter");
-
-  if (countryFilter) {
-    countryFilter.addEventListener(
-      "change",
-      filterPlayers
-    );
-  }
-
-
-  const roleFilter =
-    document.getElementById("roleFilter");
-
-  if (roleFilter) {
-    roleFilter.addEventListener(
-      "change",
-      filterPlayers
-    );
-  }
-
-
-  const edpiFilter =
-    document.getElementById("edpiFilter");
-
-  if (edpiFilter) {
-    edpiFilter.addEventListener(
-      "change",
-      filterPlayers
-    );
-  }
-
-
-  const sensFilter =
-    document.getElementById("sensFilter");
-
-  if (sensFilter) {
-    sensFilter.addEventListener(
-      "change",
-      filterPlayers
-    );
-  }
-
-
-  renderPlayers(players);
-
-});
+);
