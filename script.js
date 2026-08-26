@@ -264,7 +264,7 @@ const players = [
     dpi: 1600,
     sens: 0.14,
     mouse: "Logicool G PRO X2 SUPERSTRIKE",
-    mouseLink: "https://link.amazon/B08qSNgo5"
+    mouseLink: "https://link.amazon/B08qSNgo5",
     mousepad: "Pulsar Saturn Pro Red Soft",
   },
 
