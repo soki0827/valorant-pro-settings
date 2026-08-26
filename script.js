@@ -263,7 +263,8 @@ const players = [
     role: "Duelist",
     dpi: 1600,
     sens: 0.14,
-    mouse: "G PRO X SUPERLIGHT",
+    mouse: "Logicool G PRO X2 SUPERSTRIKE",
+    mouseLink: "https://link.amazon/B08qSNgo5"
     mousepad: "Pulsar Saturn Pro Red Soft",
   },
 
@@ -276,6 +277,7 @@ const players = [
     dpi: 1600,
     sens: 0.1,
     mouse: "Razer Viper V3 Pro",
+    mouseLink: "https://link.amazon/B02B5we6v",
     mousepad: "未登録",
   },
 
@@ -324,6 +326,7 @@ const players = [
     dpi: 800,
     sens: 0.2,
     mouse: "Logicool G PRO X SUPERLIGHT 2",
+    mouseLink: "https://link.amazon/B06kH5b1r",
     mousepad: "ARTISAN 零 FX SOFT 橙XL",
   },
  {
