@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="ja">
 
+<!DOCTYPE html>
+<html lang="ja">
+
 <head>
 
   <meta charset="UTF-8">
 
   <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <meta
-    name="description"
-    content="VALORANTプロ選手のDPI・感度・eDPI・マウス・マウスパッドなどの設定を検索できるサイトです。"
+　name="description"
+  content="VALORANTプロ選手のDPI・感度・eDPI・マウス・マウスパッドなどの設定を検索できるサイトです。"
+>
   >
 
   <meta
@@ -20,13 +19,12 @@
     content="V5oojDNGcRwzI8Rn1DCLUJqRLTM4F4fBTgIdTE9JxsI"
   >
 
-  <title>
-    VALORANTプロ選手の感度・デバイス設定まとめ | VALORANT Pro Settings
-  </title>
+ <title>VALORANTプロ選手の感度・デバイス設定まとめ | VALORANT Pro Settings</title>
 
   <link
     rel="stylesheet"
     href="style.css"
+  >
   >
 
 </head>
@@ -34,23 +32,13 @@
 
 <body>
 
-
-  <!-- ========================= -->
-  <!-- HEADER -->
-  <!-- ========================= -->
-
   <header class="header">
 
     <div class="header-inner">
 
       <div class="logo">
-
         VALORANT
-
-        <span>
-          PRO SETTINGS
-        </span>
-
+        <span>PRO SETTINGS</span>
       </div>
 
       <p class="subtitle">
@@ -62,10 +50,6 @@
   </header>
 
 
-  <!-- ========================= -->
-  <!-- MAIN -->
-  <!-- ========================= -->
-
   <main class="container">
 
 
@@ -75,13 +59,13 @@
 
     <section class="filter-section">
 
+
       <div class="search-box">
 
         <input
           type="text"
           id="searchInput"
           placeholder="選手名・チーム名を検索..."
-          autocomplete="off"
         >
 
       </div>
@@ -247,7 +231,7 @@
 
 
     <!-- ========================= -->
-    <!-- 選手一覧 -->
+    <!-- 一覧 -->
     <!-- ========================= -->
 
     <section id="playerSection">
@@ -318,23 +302,18 @@
           type="number"
           id="dpiInput"
           placeholder="DPI"
-          min="1"
         >
 
-        <span>
-          ×
-        </span>
+        <span>×</span>
 
         <input
           type="number"
           id="sensInput"
           placeholder="感度"
-          min="0"
           step="0.001"
         >
 
         <button
-          type="button"
           onclick="calculateEDPI()"
         >
           計算
@@ -359,58 +338,16 @@
   </main>
 
 
-  <!-- ========================= -->
-  <!-- FOOTER -->
-  <!-- ========================= -->
-
   <footer>
-
 
     <p>
       VALORANT PRO SETTINGS
     </p>
 
-
-    <!-- ========================= -->
-    <!-- お問い合わせ -->
-    <!-- ========================= -->
-
-    <div class="contact-info">
-
-      <h3>
-        お問い合わせ
-      </h3>
-
-      <p>
-        現在、お問い合わせフォームでの受付を一時休止しております。
-      </p>
-
-      <p>
-        ご質問・掲載情報の修正依頼などがございましたら、
-        公式XのDMまでご連絡ください。
-      </p>
-
-      <a
-        href="https://x.com/nikoprosettei"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="x-button"
-      >
-        公式Xはこちら ↗
-      </a>
-
-    </div>
-
-
   </footer>
 
 
-  <!-- ========================= -->
-  <!-- JavaScript -->
-  <!-- ========================= -->
-
   <script src="script.js"></script>
-
 
 </body>
 
