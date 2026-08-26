@@ -640,3 +640,207 @@ footer {
   color: #111111;
   transform: translateY(-1px);
 }
+/* =========================
+   HOME COLOR / ACCENT
+========================= */
+
+.header {
+  background:
+    linear-gradient(
+      135deg,
+      #11131b 0%,
+      #17151d 45%,
+      #241319 100%
+    );
+
+  border-bottom: 1px solid #3a2026;
+}
+
+
+.header-inner {
+  position: relative;
+}
+
+
+.header-inner::before {
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  top: -100px;
+  right: 20px;
+
+  background: #ff4655;
+
+  opacity: 0.08;
+
+  filter: blur(70px);
+
+  pointer-events: none;
+}
+
+
+.logo {
+  position: relative;
+
+  color: #ffffff;
+
+  text-shadow:
+    0 0 20px rgba(255, 70, 85, 0.25);
+}
+
+
+.logo span {
+  color: #ff4655;
+
+  text-shadow:
+    0 0 15px rgba(255, 70, 85, 0.4);
+}
+
+
+.subtitle {
+  position: relative;
+}
+
+
+/* =========================
+   HOME ACCENT
+========================= */
+
+.container::before {
+  content: "";
+
+  display: block;
+
+  width: 100%;
+  height: 3px;
+
+  margin-bottom: 30px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ff4655,
+      #ff6b78,
+      transparent
+    );
+
+  border-radius: 10px;
+}
+
+
+/* =========================
+   FILTER ACCENT
+========================= */
+
+.filter-section {
+  position: relative;
+
+  padding: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #13161e,
+      #18151b
+    );
+
+  border: 1px solid #292e39;
+
+  border-radius: 14px;
+}
+
+
+.filter-section::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 20px;
+  bottom: 20px;
+
+  width: 3px;
+
+  background: #ff4655;
+
+  border-radius: 0 5px 5px 0;
+}
+
+
+/* =========================
+   PLAYER SECTION
+========================= */
+
+.list-header h1 {
+  position: relative;
+
+  display: inline-block;
+}
+
+
+.list-header h1::after {
+  content: "";
+
+  display: block;
+
+  width: 45px;
+  height: 3px;
+
+  margin-top: 8px;
+
+  background: #ff4655;
+
+  border-radius: 5px;
+}
+
+
+/* =========================
+   CALCULATOR ACCENT
+========================= */
+
+.calculator {
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #13161e 0%,
+      #17151b 100%
+    );
+}
+
+
+.calculator::after {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  right: -70px;
+  bottom: -90px;
+
+  background: #ff4655;
+
+  opacity: 0.06;
+
+  filter: blur(50px);
+
+  pointer-events: none;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: #0e1016;
+}
