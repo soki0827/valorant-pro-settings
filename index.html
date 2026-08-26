@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>VALORANT Pro Settings</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+
+<body>
+
+  <header class="header">
+
+    <div class="header-inner">
+
+      <div class="logo">
+        VALORANT
+        <span>PRO SETTINGS</span>
+      </div>
+
+      <p class="subtitle">
+        プロ選手の感度・デバイス情報を検索
+      </p>
+
+    </div>
+
+  </header>
+
+
+  <main class="container">
+
+
+    <!-- ========================= -->
+    <!-- 検索・フィルター -->
+    <!-- ========================= -->
+
+    <section class="filter-section">
+
+
+      <div class="search-box">
+
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="選手名・チーム名を検索..."
+        >
+
+      </div>
+
+
+      <div class="filters">
+
+
+        <!-- 国籍 -->
+
+        <select id="countryFilter">
+
+          <option value="all">
+            すべての国籍
+          </option>
+
+          <option value="JP">
+            🇯🇵 日本
+          </option>
+
+          <option value="KR">
+            🇰🇷 韓国
+          </option>
+
+          <option value="CA">
+            🇨🇦 カナダ
+          </option>
+
+          <option value="RU">
+            🇷🇺 ロシア
+          </option>
+
+          <option value="US">
+            🇺🇸 アメリカ
+          </option>
+
+          <option value="CN">
+            🇨🇳 中国
+          </option>
+
+        </select>
+
+
+        <!-- 地域 -->
+
+        <select id="regionFilter">
+
+          <option value="all">
+            すべての地域
+          </option>
+
+          <option value="Pacific">
+            Pacific
+          </option>
+
+          <option value="Americas">
+            Americas
+          </option>
+
+          <option value="EMEA">
+            EMEA
+          </option>
+
+          <option value="China">
+            China
+          </option>
+
+        </select>
+
+
+        <!-- ロール -->
+
+        <select id="roleFilter">
+
+          <option value="all">
+            すべてのロール
+          </option>
+
+          <option value="Duelist">
+            Duelist
+          </option>
+
+          <option value="Initiator">
+            Initiator
+          </option>
+
+          <option value="Controller">
+            Controller
+          </option>
+
+          <option value="Sentinel">
+            Sentinel
+          </option>
+
+          <option value="Flex">
+            Flex
+          </option>
+
+          <option value="未登録">
+            未登録
+          </option>
+
+        </select>
+
+
+        <!-- eDPI -->
+
+        <select id="edpiFilter">
+
+          <option value="all">
+            すべてのeDPI
+          </option>
+
+          <option value="low">
+            100〜200
+          </option>
+
+          <option value="mid">
+            200〜300
+          </option>
+
+          <option value="high">
+            300〜400
+          </option>
+
+          <option value="veryhigh">
+            400以上
+          </option>
+
+        </select>
+
+
+        <!-- 感度 -->
+
+        <select id="sensFilter">
+
+          <option value="all">
+            すべての感度
+          </option>
+
+          <option value="low">
+            0.10〜0.20
+          </option>
+
+          <option value="mid">
+            0.20〜0.30
+          </option>
+
+          <option value="high">
+            0.30〜0.40
+          </option>
+
+          <option value="veryhigh">
+            0.40以上
+          </option>
+
+        </select>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- 一覧 -->
+    <!-- ========================= -->
+
+    <section id="playerSection">
+
+
+      <div class="list-header">
+
+        <div>
+
+          <h1>
+            プロ選手一覧
+          </h1>
+
+          <p>
+            VALORANTプロ選手の設定をチェック
+          </p>
+
+        </div>
+
+
+        <div
+          id="resultCount"
+          class="result-count"
+        >
+          0人
+        </div>
+
+      </div>
+
+
+      <div
+        id="playerList"
+        class="player-list"
+      ></div>
+
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- 選手詳細 -->
+    <!-- ========================= -->
+
+    <section
+      id="playerDetail"
+      class="player-detail hidden"
+    ></section>
+
+
+    <!-- ========================= -->
+    <!-- eDPI計算機 -->
+    <!-- ========================= -->
+
+    <section class="calculator">
+
+      <h2>
+        eDPI Calculator
+      </h2>
+
+      <p>
+        DPIとゲーム内感度からeDPIを計算
+      </p>
+
+
+      <div class="calculator-inputs">
+
+        <input
+          type="number"
+          id="dpiInput"
+          placeholder="DPI"
+        >
+
+        <span>×</span>
+
+        <input
+          type="number"
+          id="sensInput"
+          placeholder="感度"
+          step="0.001"
+        >
+
+        <button
+          onclick="calculateEDPI()"
+        >
+          計算
+        </button>
+
+      </div>
+
+
+      <div class="calculator-result">
+
+        eDPI
+
+        <strong id="edpiResult">
+          0.0
+        </strong>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <footer>
+
+    <p>
+      VALORANT PRO SETTINGS
+    </p>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
