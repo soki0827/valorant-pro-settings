@@ -618,20 +618,36 @@ footer {
     width: 100%;
   }
 
-}.amazon-button {
+/* =========================
+   Amazon Button
+========================= */
+
+.amazon-button {
   display: inline-block;
+
   margin-top: 10px;
+
   padding: 10px 16px;
+
   background: #ff9900;
-  color: #111 !important;
+
+  color: #111111 !important;
+
   text-decoration: none;
+
+  font-size: 14px;
+
   font-weight: 700;
+
   border-radius: 8px;
-  transition: 0.2s;
+
+  border: 1px solid #ff9900;
+
+  transition:
+    background 0.2s,
+    transform 0.2s;
 }
+
 
 .amazon-button:hover {
   background: #ffad33;
-  color: #000 !important;
-  transform: translateY(-1px);
-}
