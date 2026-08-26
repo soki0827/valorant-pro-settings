@@ -168,8 +168,143 @@ const players = [
     mousepad: "WALLHACK SP-004 Hatsune Miku",
   }
 
-];
 
+
+  // =========================
+  // RIDDLE ORDER
+  // =========================
+
+  {
+    name: "gyen",
+    team: "RIDDLE ORDER",
+    region: "Pacific",
+    country: "Japan",
+    role: "Sentinel",
+    dpi: 1000,
+    sens: 0.33,
+    mouse: "G PRO X2",
+    mousepad: "G-SR-SE ROUGE",
+  },
+
+  {
+    name: "joxjo",
+    team: "RIDDLE ORDER",
+    region: "Pacific",
+    country: "Japan",
+    role: "Initiator",
+    dpi: 800,
+    sens: 0.355,
+    mouse: "G PRO X2",
+    mousepad: "ARTISAN Hien FX XL",
+  },
+
+  {
+    name: "luca",
+    team: "RIDDLE ORDER",
+    region: "Pacific",
+    country: "Japan",
+    role: "Sentinel",
+    dpi: 1600,
+    sens: 0.08,
+    mouse: "未登録",
+    mousepad: "未登録",
+  },
+
+  {
+    name: "minty",
+    team: "RIDDLE ORDER",
+    region: "Pacific",
+    country: "Japan",
+    role: "Controller",
+    dpi: 1600,
+    sens: 0.13,
+    mouse: "G PRO X SUPERLIGHT 2",
+    mousepad: "ARTISAN 零 NINJA FX SOFT",
+    scopedSens: 1.09,
+  },
+
+  {
+    name: "Seoldam",
+    team: "RIDDLE ORDER",
+    region: "Pacific",
+    country: "Japan",
+    role: "Duelist",
+    dpi: 1600,
+    sens: 0.14,
+    mouse: "G PRO X SUPERLIGHT",
+    mousepad: "Pulsar Saturn Pro Red Soft",
+  },
+
+ {
+    name: "Airy",
+    team: "Delight",
+    region: "Pacific",
+    country: "Japan",
+    role: "未登録",
+    dpi: 1600,
+    sens: 0.1,
+    mouse: "Razer Viper V3 Pro",
+    mousepad: "未登録",
+  },
+
+  {
+    name: "daydus",
+    team: "Delight",
+    region: "Pacific",
+    country: "Japan",
+    role: "未登録",
+    dpi: 1600,
+    sens: 0.1,
+    mouse: "未登録",
+    mousepad: "未登録",
+  },
+
+  {
+    name: "fukukeN",
+    team: "Delight",
+    region: "Pacific",
+    country: "Japan",
+    role: "未登録",
+    dpi: 0,
+    sens: 0,
+    mouse: "未登録",
+    mousepad: "未登録",
+  },
+
+  {
+    name: "Hands",
+    team: "Delight",
+    region: "Pacific",
+    country: "Japan",
+    role: "未登録",
+    dpi: 0,
+    sens: 0,
+    mouse: "未登録",
+    mousepad: "未登録",
+  },
+
+  {
+    name: "Mametu",
+    team: "Delight",
+    region: "Pacific",
+    country: "Japan",
+    role: "未登録",
+    dpi: 800,
+    sens: 0.2,
+    mouse: "Logicool G PRO X SUPERLIGHT 2",
+    mousepad: "ARTISAN 零 FX SOFT 橙XL",
+  },
+ {
+    name: "winnable",
+    team: "ex Delight AC",
+    region: "Pacific",
+    country: "Japan",
+    role: "未登録",
+    dpi: 800,
+    sens: 0.58,
+    mouse: "未登録",
+    mousepad: "未登録"
+]
 
 // ==============================
 // 基本機能
