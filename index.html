@@ -1,372 +1,289 @@
-<!DOCTYPE html>
-<html lang="ja">
-
+mouse: "Logicool G PRO X SUPERLIGHT 2",
+mouseLink: "Amazon URL",
+mousepad: "ARTISAN 零 FX SOFT"
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
 
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-  <meta
-　name="description"
-  content="VALORANTプロ選手のDPI・感度・eDPI・マウス・マウスパッドなどの設定を検索できるサイトです。"
->
-  >
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="google-site-verification"
-    content="V5oojDNGcRwzI8Rn1DCLUJqRLTM4F4fBTgIdTE9JxsI"
-  >
+<title>VALORANT Pro Settings</title>
 
- <title>VALORANTプロ選手の感度・デバイス設定まとめ | VALORANT Pro Settings</title>
-
-  <link
-    rel="stylesheet"
-    href="style.css"
-  >
-  >
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 
 <body>
 
-  <header class="header">
 
-    <div class="header-inner">
+<header>
 
-      <div class="logo">
-        VALORANT
-        <span>PRO SETTINGS</span>
-      </div>
+<h1>VALORANT Pro Settings</h1>
 
-      <p class="subtitle">
-        プロ選手の感度・デバイス情報を検索
-      </p>
+<p>
+VALORANTプロ選手の感度・デバイス設定一覧
+</p>
 
-    </div>
+</header>
 
-  </header>
 
 
-  <main class="container">
+<main>
 
 
-    <!-- ========================= -->
-    <!-- 検索・フィルター -->
-    <!-- ========================= -->
+<section class="search-area">
 
-    <section class="filter-section">
 
+<input
+id="searchInput"
+type="text"
+placeholder="選手名・チーム名検索"
+/>
 
-      <div class="search-box">
 
-        <input
-          type="text"
-          id="searchInput"
-          placeholder="選手名・チーム名を検索..."
-        >
 
-      </div>
+<select id="regionFilter">
 
+<option value="all">
+全地域
+</option>
 
-      <div class="filters">
+<option value="Pacific">
+Pacific
+</option>
 
+<option value="Americas">
+Americas
+</option>
 
-        <!-- 国籍 -->
+<option value="EMEA">
+EMEA
+</option>
 
-        <select id="countryFilter">
+<option value="China">
+China
+</option>
 
-          <option value="all">
-            すべての国籍
-          </option>
+</select>
 
-          <option value="JP">
-            🇯🇵 日本
-          </option>
 
-          <option value="KR">
-            🇰🇷 韓国
-          </option>
 
-          <option value="CA">
-            🇨🇦 カナダ
-          </option>
+<select id="countryFilter">
 
-          <option value="RU">
-            🇷🇺 ロシア
-          </option>
+<option value="all">
+全ての国
+</option>
 
-          <option value="US">
-            🇺🇸 アメリカ
-          </option>
+<option value="Japan">
+日本
+</option>
 
-          <option value="CN">
-            🇨🇳 中国
-          </option>
+<option value="South Korea">
+韓国
+</option>
 
-        </select>
+<option value="Canada">
+カナダ
+</option>
 
+<option value="Russia">
+ロシア
+</option>
 
-        <!-- 地域 -->
+</select>
 
-        <select id="regionFilter">
 
-          <option value="all">
-            すべての地域
-          </option>
 
-          <option value="Pacific">
-            Pacific
-          </option>
+<select id="roleFilter">
 
-          <option value="Americas">
-            Americas
-          </option>
+<option value="all">
+全ロール
+</option>
 
-          <option value="EMEA">
-            EMEA
-          </option>
+<option value="Duelist">
+Duelist
+</option>
 
-          <option value="China">
-            China
-          </option>
+<option value="Controller">
+Controller
+</option>
 
-        </select>
+<option value="Initiator">
+Initiator
+</option>
 
+<option value="Sentinel">
+Sentinel
+</option>
 
-        <!-- ロール -->
+<option value="Flex">
+Flex
+</option>
 
-        <select id="roleFilter">
+</select>
 
-          <option value="all">
-            すべてのロール
-          </option>
 
-          <option value="Duelist">
-            Duelist
-          </option>
 
-          <option value="Initiator">
-            Initiator
-          </option>
+<select id="edpiFilter">
 
-          <option value="Controller">
-            Controller
-          </option>
+<option value="all">
+全eDPI
+</option>
 
-          <option value="Sentinel">
-            Sentinel
-          </option>
+<option value="low">
+100〜200
+</option>
 
-          <option value="Flex">
-            Flex
-          </option>
+<option value="mid">
+200〜300
+</option>
 
-          <option value="未登録">
-            未登録
-          </option>
+<option value="high">
+300〜400
+</option>
 
-        </select>
+<option value="veryhigh">
+400以上
+</option>
 
+</select>
 
-        <!-- eDPI -->
 
-        <select id="edpiFilter">
+<select id="sensFilter">
 
-          <option value="all">
-            すべてのeDPI
-          </option>
+<option value="all">
+全感度
+</option>
 
-          <option value="low">
-            100〜200
-          </option>
+<option value="low">
+0.10〜0.20
+</option>
 
-          <option value="mid">
-            200〜300
-          </option>
+<option value="mid">
+0.20〜0.30
+</option>
 
-          <option value="high">
-            300〜400
-          </option>
+<option value="high">
+0.30〜0.40
+</option>
 
-          <option value="veryhigh">
-            400以上
-          </option>
+<option value="veryhigh">
+0.40以上
+</option>
 
-        </select>
+</select>
 
 
-        <!-- 感度 -->
+</section>
 
-        <select id="sensFilter">
 
-          <option value="all">
-            すべての感度
-          </option>
 
-          <option value="low">
-            0.10〜0.20
-          </option>
 
-          <option value="mid">
-            0.20〜0.30
-          </option>
+<div class="count">
 
-          <option value="high">
-            0.30〜0.40
-          </option>
+現在
+<span id="resultCount">
+0人
+</span>
 
-          <option value="veryhigh">
-            0.40以上
-          </option>
+</div>
 
-        </select>
 
 
-      </div>
 
-    </section>
+<section
+id="playerList"
+class="player-list"
+>
+</section>
 
 
-    <!-- ========================= -->
-    <!-- 一覧 -->
-    <!-- ========================= -->
 
-    <section id="playerSection">
+<section
+id="playerDetail"
+class="hidden"
+>
+</section>
 
 
-      <div class="list-header">
 
-        <div>
+<section class="edpi-calculator">
 
-          <h1>
-            プロ選手一覧
-          </h1>
 
-          <p>
-            VALORANTプロ選手の設定をチェック
-          </p>
+<h2>
+eDPI計算機
+</h2>
 
-        </div>
 
+<input
+id="dpiInput"
+type="number"
+placeholder="DPI"
+/>
 
-        <div
-          id="resultCount"
-          class="result-count"
-        >
-          0人
-        </div>
 
-      </div>
+<input
+id="sensInput"
+type="number"
+step="0.001"
+placeholder="Sensitivity"
+/>
 
 
-      <div
-        id="playerList"
-        class="player-list"
-      ></div>
+<button onclick="calculateEDPI()">
+計算
+</button>
 
 
-    </section>
+<p>
 
+eDPI :
 
-    <!-- ========================= -->
-    <!-- 選手詳細 -->
-    <!-- ========================= -->
+<span id="edpiResult">
+0
+</span>
 
-    <section
-      id="playerDetail"
-      class="player-detail hidden"
-    ></section>
+</p>
 
 
-    <!-- ========================= -->
-    <!-- eDPI計算機 -->
-    <!-- ========================= -->
+</section>
 
-    <section class="calculator">
 
-      <h2>
-        eDPI Calculator
-      </h2>
 
-      <p>
-        DPIとゲーム内感度からeDPIを計算
-      </p>
+</main>
 
 
-      <div class="calculator-inputs">
 
-        <input
-          type="number"
-          id="dpiInput"
-          placeholder="DPI"
-        >
-
-        <span>×</span>
-
-        <input
-          type="number"
-          id="sensInput"
-          placeholder="感度"
-          step="0.001"
-        >
-
-        <button
-          onclick="calculateEDPI()"
-        >
-          計算
-        </button>
-
-      </div>
-
-
-      <div class="calculator-result">
-
-        eDPI
-
-        <strong id="edpiResult">
-          0.0
-        </strong>
-
-      </div>
-
-    </section>
-
-
-  </main>
 
 <footer>
 
-  <p>
-    VALORANT PRO SETTINGS
-  </p>
+
+<a href="privacy.html">
+プライバシーポリシー
+</a>
 
 
-  <div class="footer-links">
-
-    <a href="privacy.html">
-      プライバシーポリシー
-    </a>
+<a href="contact.html">
+お問い合わせ
+</a>
 
 
-    <a href="contact.html">
-      お問い合わせ
-    </a>
-
-  </div>
-
-
-  <p class="copyright">
-    © 2026 nikoprosettei
-  </p>
+<p>
+© VALORANT Pro Settings
+</p>
 
 
 </footer>
 
 
-  <script src="script.js"></script>
+
+
+<script src="script.js"></script>
+
 
 </body>
 
