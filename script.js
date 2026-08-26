@@ -1,5 +1,8 @@
-const players = [
+// ========================================
+// VALO SENS - Player Database
+// ========================================
 
+const players = [
   // =========================
   // ZETA DIVISION
   // =========================
@@ -14,7 +17,7 @@ const players = [
     sens: 0.22,
     mouse: "Logicool G PRO X SUPERLIGHT 2",
     mouseLink: "https://link.amazon/B06kH5b1r",
-    mousepad: "Nachoneko × ふもコレ",
+    mousepad: "Nachoneko × ふもコレ"
   },
 
   {
@@ -27,7 +30,7 @@ const players = [
     sens: 0.27,
     mouse: "Razer Viper V3 Pro",
     mouseLink: "https://link.amazon/B02B5we6v",
-    mousepad: "ARTISAN NINJA FX Zero",
+    mousepad: "ARTISAN NINJA FX Zero"
   },
 
   {
@@ -39,7 +42,7 @@ const players = [
     dpi: 1600,
     sens: 0.136,
     mouse: "未登録",
-    mousepad: "未登録",
+    mousepad: "未登録"
   },
 
   {
@@ -51,7 +54,7 @@ const players = [
     dpi: 800,
     sens: 0.4,
     mouse: "未登録",
-    mousepad: "未登録",
+    mousepad: "未登録"
   },
 
   {
@@ -63,7 +66,7 @@ const players = [
     dpi: 800,
     sens: 0.225,
     mouse: "未登録",
-    mousepad: "未登録",
+    mousepad: "未登録"
   },
 
   {
@@ -76,9 +79,8 @@ const players = [
     sens: 0.175,
     mouse: "Razer Viper V4 Pro",
     mouseLink: "https://link.amazon/B0gImS1eE",
-    mousepad: "Pulsar eS Saturn Pro",
+    mousepad: "Pulsar eS Saturn Pro"
   },
-
 
   // =========================
   // GEN.G
@@ -93,9 +95,8 @@ const players = [
     dpi: 800,
     sens: 0.45,
     mouse: "未登録",
-    mousepad: "未登録",
+    mousepad: "未登録"
   },
-
 
   // =========================
   // PAPER REX
@@ -110,9 +111,8 @@ const players = [
     dpi: 800,
     sens: 0.58,
     mouse: "未登録",
-    mousepad: "未登録",
+    mousepad: "未登録"
   },
-
 
   // =========================
   // SENTINELS
@@ -127,9 +127,8 @@ const players = [
     dpi: 800,
     sens: 0.22,
     mouse: "未登録",
-    mousepad: "未登録",
+    mousepad: "未登録"
   },
-
 
   // =========================
   // DETONATION FOCUSME
@@ -145,7 +144,7 @@ const players = [
     sens: 0.185,
     mouse: "LAMZU Maya X Light Pink",
     mouseLink: "https://link.amazon/B0ctMUcku",
-    mousepad: "ARTISAN NINJA FX 99式 SOFT",
+    mousepad: "ARTISAN NINJA FX 99式 SOFT"
   },
 
   {
@@ -158,7 +157,7 @@ const players = [
     sens: 0.35,
     mouse: "Razer Viper V4 Pro",
     mouseLink: "https://link.amazon/B0gImS1eE",
-    mousepad: "ARTISAN NINJA FX Zero",
+    mousepad: "ARTISAN NINJA FX Zero"
   },
 
   {
@@ -171,7 +170,7 @@ const players = [
     sens: 0.173,
     mouse: "Razer Viper V3 Pro",
     mouseLink: "https://link.amazon/B02B5we6v",
-    mousepad: "meiy glasspad",
+    mousepad: "meiy glasspad"
   },
 
   {
@@ -184,7 +183,7 @@ const players = [
     sens: 0.211,
     mouse: "WLMOUSE Beast X Max",
     mouseLink: "https://link.amazon/B0bpdmtk7",
-    mousepad: "ARTISAN NINJA FX Hayate Otsu V2",
+    mousepad: "ARTISAN NINJA FX Hayate Otsu V2"
   },
 
   {
@@ -196,9 +195,8 @@ const players = [
     dpi: 1600,
     sens: 0.08,
     mouse: "Finalmouse UltralightX",
-    mousepad: "WALLHACK SP-004 Hatsune Miku",
+    mousepad: "WALLHACK SP-004 Hatsune Miku"
   },
-
 
   // =========================
   // RIDDLE ORDER
@@ -212,9 +210,9 @@ const players = [
     role: "Sentinel",
     dpi: 1000,
     sens: 0.33,
-      mouse: "Logicool G PRO X SUPERLIGHT 2",
+    mouse: "Logicool G PRO X SUPERLIGHT 2",
     mouseLink: "https://link.amazon/B06kH5b1r",
-    mousepad: "G-SR-SE ROUGE",
+    mousepad: "G-SR-SE ROUGE"
   },
 
   {
@@ -225,9 +223,9 @@ const players = [
     role: "Initiator",
     dpi: 800,
     sens: 0.355,
-      mouse: "Logicool G PRO X SUPERLIGHT 2",
+    mouse: "Logicool G PRO X SUPERLIGHT 2",
     mouseLink: "https://link.amazon/B06kH5b1r",
-    mousepad: "ARTISAN Hien FX XL",
+    mousepad: "ARTISAN Hien FX XL"
   },
 
   {
@@ -239,7 +237,7 @@ const players = [
     dpi: 1600,
     sens: 0.08,
     mouse: "未登録",
-    mousepad: "未登録",
+    mousepad: "未登録"
   },
 
   {
@@ -252,9 +250,10 @@ const players = [
     sens: 0.13,
     mouse: "G PRO X SUPERLIGHT 2",
     mousepad: "ARTISAN 零 NINJA FX SOFT",
-    scopedSens: 1.09,
+    scopedSens: 1.09
   },
 
+  // ★ Seoldam 修正版
   {
     name: "Seoldam",
     team: "RIDDLE ORDER",
@@ -265,10 +264,14 @@ const players = [
     sens: 0.14,
     mouse: "Logicool G PRO X2 SUPERSTRIKE",
     mouseLink: "https://link.amazon/B08qSNgo5",
-    mousepad: "Pulsar Saturn Pro Red Soft",
+    mousepad: "Pulsar Saturn Pro Red Soft"
   },
 
- {
+  // =========================
+  // DELIGHT
+  // =========================
+
+  {
     name: "Airy",
     team: "Delight",
     region: "Pacific",
@@ -278,7 +281,7 @@ const players = [
     sens: 0.1,
     mouse: "Razer Viper V3 Pro",
     mouseLink: "https://link.amazon/B02B5we6v",
-    mousepad: "未登録",
+    mousepad: "未登録"
   },
 
   {
@@ -290,7 +293,7 @@ const players = [
     dpi: 1600,
     sens: 0.1,
     mouse: "未登録",
-    mousepad: "未登録",
+    mousepad: "未登録"
   },
 
   {
@@ -302,7 +305,7 @@ const players = [
     dpi: 0,
     sens: 0,
     mouse: "未登録",
-    mousepad: "未登録",
+    mousepad: "未登録"
   },
 
   {
@@ -314,7 +317,7 @@ const players = [
     dpi: 0,
     sens: 0,
     mouse: "未登録",
-    mousepad: "未登録",
+    mousepad: "未登録"
   },
 
   {
@@ -327,9 +330,10 @@ const players = [
     sens: 0.2,
     mouse: "Logicool G PRO X SUPERLIGHT 2",
     mouseLink: "https://link.amazon/B06kH5b1r",
-    mousepad: "ARTISAN 零 FX SOFT 橙XL",
+    mousepad: "ARTISAN 零 FX SOFT 橙XL"
   },
- {
+
+  {
     name: "winnable",
     team: "ex Delight AC",
     region: "Pacific",
@@ -338,23 +342,27 @@ const players = [
     dpi: 800,
     sens: 0.58,
     mouse: "未登録",
-    mousepad: "未登録",
-  },
-]
+    mousepad: "未登録"
+  }
+];
 
 
-// =========================
-// eDPI計算
-// =========================
+// ========================================
+// eDPI
+// ========================================
 
 function getEDPI(player) {
+  if (!player.dpi || !player.sens) {
+    return 0;
+  }
+
   return player.dpi * player.sens;
 }
 
 
-// =========================
-// 選手一覧表示
-// =========================
+// ========================================
+// 選手一覧
+// ========================================
 
 function renderPlayers(list) {
 
@@ -370,6 +378,19 @@ function renderPlayers(list) {
     resultCount.textContent = `${list.length}人`;
   }
 
+  if (list.length === 0) {
+
+    container.innerHTML = `
+      <div class="no-results">
+        <h3>選手が見つかりません</h3>
+        <p>検索条件を変更してみてください。</p>
+      </div>
+    `;
+
+    return;
+  }
+
+
   list.forEach(player => {
 
     const edpi = getEDPI(player);
@@ -378,14 +399,16 @@ function renderPlayers(list) {
 
     card.className = "player-card";
 
-    card.onclick = () => {
+
+    card.addEventListener("click", () => {
       showPlayerDetail(player.name);
-    };
+    });
+
 
     card.innerHTML = `
 
       <div class="player-name">
-        ${player.name}
+        ${player.country} ${player.name}
       </div>
 
       <div class="player-team">
@@ -404,72 +427,87 @@ function renderPlayers(list) {
         <div class="stat">
           <span class="stat-label">DPI</span>
           <span class="stat-value">
-            ${player.dpi.toLocaleString()}
+            ${player.dpi ? player.dpi.toLocaleString() : "未登録"}
           </span>
         </div>
 
         <div class="stat">
           <span class="stat-label">SENS</span>
           <span class="stat-value">
-            ${player.sens}
+            ${player.sens || "未登録"}
           </span>
         </div>
 
         <div class="stat">
           <span class="stat-label">eDPI</span>
           <span class="stat-value">
-            ${edpi.toFixed(1)}
+            ${edpi ? edpi.toFixed(1) : "未登録"}
           </span>
         </div>
 
       </div>
-
     `;
 
     container.appendChild(card);
 
   });
-
 }
 
 
-// =========================
+// ========================================
 // 絞り込み
-// =========================
+// ========================================
 
 function filterPlayers() {
 
-  const searchInput = document.getElementById("searchInput");
-  const regionFilter = document.getElementById("regionFilter");
-  const countryFilter = document.getElementById("countryFilter");
-  const roleFilter = document.getElementById("roleFilter");
-  const edpiFilter = document.getElementById("edpiFilter");
-  const sensFilter = document.getElementById("sensFilter");
+  const searchInput =
+    document.getElementById("searchInput");
+
+  const regionFilter =
+    document.getElementById("regionFilter");
+
+  const countryFilter =
+    document.getElementById("countryFilter");
+
+  const roleFilter =
+    document.getElementById("roleFilter");
+
+  const edpiFilter =
+    document.getElementById("edpiFilter");
+
+  const sensFilter =
+    document.getElementById("sensFilter");
+
 
   const search =
     searchInput
-      ? searchInput.value.toLowerCase()
+      ? searchInput.value.trim().toLowerCase()
       : "";
+
 
   const region =
     regionFilter
       ? regionFilter.value
       : "all";
 
+
   const country =
     countryFilter
       ? countryFilter.value
       : "all";
+
 
   const role =
     roleFilter
       ? roleFilter.value
       : "all";
 
+
   const edpiValue =
     edpiFilter
       ? edpiFilter.value
       : "all";
+
 
   const sensValue =
     sensFilter
@@ -481,71 +519,103 @@ function filterPlayers() {
 
     const edpi = getEDPI(player);
 
+
     const searchMatch =
+      !search ||
       player.name.toLowerCase().includes(search) ||
       player.team.toLowerCase().includes(search);
+
 
     const regionMatch =
       region === "all" ||
       player.region === region;
 
+
     const countryMatch =
       country === "all" ||
       player.country === country;
+
 
     const roleMatch =
       role === "all" ||
       player.role === role;
 
+
     let edpiMatch = true;
 
+
     if (edpiValue === "low") {
+
       edpiMatch =
         edpi >= 100 &&
         edpi < 200;
+
     }
 
+
     if (edpiValue === "mid") {
+
       edpiMatch =
         edpi >= 200 &&
         edpi < 300;
+
     }
 
+
     if (edpiValue === "high") {
+
       edpiMatch =
         edpi >= 300 &&
         edpi < 400;
+
     }
 
+
     if (edpiValue === "veryhigh") {
+
       edpiMatch =
         edpi >= 400;
+
     }
+
 
     let sensMatch = true;
 
+
     if (sensValue === "low") {
+
       sensMatch =
         player.sens >= 0.10 &&
         player.sens < 0.20;
+
     }
 
+
     if (sensValue === "mid") {
+
       sensMatch =
         player.sens >= 0.20 &&
         player.sens < 0.30;
+
     }
 
+
     if (sensValue === "high") {
+
       sensMatch =
         player.sens >= 0.30 &&
         player.sens < 0.40;
+
     }
 
+
     if (sensValue === "veryhigh") {
+
       sensMatch =
         player.sens >= 0.40;
+
     }
+
 
     return (
       searchMatch &&
@@ -560,22 +630,21 @@ function filterPlayers() {
 
 
   renderPlayers(filtered);
-
 }
 
 
-// =========================
+// ========================================
 // 検索
-// =========================
+// ========================================
 
 function searchPlayers() {
   filterPlayers();
 }
 
 
-// =========================
+// ========================================
 // eDPI計算機
-// =========================
+// ========================================
 
 function calculateEDPI() {
 
@@ -588,28 +657,40 @@ function calculateEDPI() {
   const result =
     document.getElementById("edpiResult");
 
+
   if (!dpiInput || !sensInput || !result) {
     return;
   }
 
+
   const dpi =
     Number(dpiInput.value);
+
 
   const sens =
     Number(sensInput.value);
 
+
+  if (!dpi || !sens) {
+
+    result.textContent = "0.0";
+
+    return;
+  }
+
+
   const edpi =
     dpi * sens;
 
+
   result.textContent =
     edpi.toFixed(1);
-
 }
 
 
-// =========================
-// 選手詳細ページ
-// =========================
+// ========================================
+// 選手詳細
+// ========================================
 
 function showPlayerDetail(playerName) {
 
@@ -618,7 +699,9 @@ function showPlayerDetail(playerName) {
       p => p.name === playerName
     );
 
+
   if (!player) return;
+
 
   const list =
     document.getElementById("playerList");
@@ -626,20 +709,21 @@ function showPlayerDetail(playerName) {
   const detail =
     document.getElementById("playerDetail");
 
+
   if (!list || !detail) return;
+
 
   list.style.display = "none";
 
   detail.classList.remove("hidden");
 
+
   const edpi =
     getEDPI(player);
 
 
-  // Amazonリンク
-  let mouseHTML = `
-    ${player.mouse}
-  `;
+  let mouseHTML =
+    player.mouse || "未登録";
 
 
   if (player.mouseLink) {
@@ -668,7 +752,7 @@ function showPlayerDetail(playerName) {
     <div class="detail-header">
 
       <div class="detail-name">
-        ${player.name}
+        ${player.country} ${player.name}
       </div>
 
       <div class="detail-team">
@@ -694,21 +778,21 @@ function showPlayerDetail(playerName) {
         <div class="stat">
           <span class="stat-label">DPI</span>
           <span class="stat-value">
-            ${player.dpi.toLocaleString()}
+            ${player.dpi || "未登録"}
           </span>
         </div>
 
         <div class="stat">
           <span class="stat-label">SENSITIVITY</span>
           <span class="stat-value">
-            ${player.sens}
+            ${player.sens || "未登録"}
           </span>
         </div>
 
         <div class="stat">
           <span class="stat-label">eDPI</span>
           <span class="stat-value">
-            ${edpi.toFixed(1)}
+            ${edpi ? edpi.toFixed(1) : "未登録"}
           </span>
         </div>
 
@@ -743,7 +827,7 @@ function showPlayerDetail(playerName) {
           </span>
 
           <span class="stat-value">
-            ${player.mousepad}
+            ${player.mousepad || "未登録"}
           </span>
 
         </div>
@@ -761,13 +845,12 @@ function showPlayerDetail(playerName) {
     </button>
 
   `;
-
 }
 
 
-// =========================
-// 選手詳細ページを閉じる
-// =========================
+// ========================================
+// 詳細を閉じる
+// ========================================
 
 function closePlayerDetail() {
 
@@ -777,84 +860,98 @@ function closePlayerDetail() {
   const detail =
     document.getElementById("playerDetail");
 
+
   if (!list || !detail) return;
+
 
   detail.classList.add("hidden");
 
   list.style.display = "grid";
-
 }
 
 
-// =========================
-// イベント設定
-// =========================
+// ========================================
+// 初期化
+// ========================================
 
 document.addEventListener("DOMContentLoaded", () => {
 
   const searchInput =
     document.getElementById("searchInput");
 
-  if (searchInput) {
-    searchInput.addEventListener(
-      "input",
-      filterPlayers
-    );
-  }
-
-
   const regionFilter =
     document.getElementById("regionFilter");
-
-  if (regionFilter) {
-    regionFilter.addEventListener(
-      "change",
-      filterPlayers
-    );
-  }
-
 
   const countryFilter =
     document.getElementById("countryFilter");
 
-  if (countryFilter) {
-    countryFilter.addEventListener(
-      "change",
-      filterPlayers
-    );
-  }
-
-
   const roleFilter =
     document.getElementById("roleFilter");
-
-  if (roleFilter) {
-    roleFilter.addEventListener(
-      "change",
-      filterPlayers
-    );
-  }
-
 
   const edpiFilter =
     document.getElementById("edpiFilter");
 
+  const sensFilter =
+    document.getElementById("sensFilter");
+
+
+  if (searchInput) {
+
+    searchInput.addEventListener(
+      "input",
+      filterPlayers
+    );
+
+  }
+
+
+  if (regionFilter) {
+
+    regionFilter.addEventListener(
+      "change",
+      filterPlayers
+    );
+
+  }
+
+
+  if (countryFilter) {
+
+    countryFilter.addEventListener(
+      "change",
+      filterPlayers
+    );
+
+  }
+
+
+  if (roleFilter) {
+
+    roleFilter.addEventListener(
+      "change",
+      filterPlayers
+    );
+
+  }
+
+
   if (edpiFilter) {
+
     edpiFilter.addEventListener(
       "change",
       filterPlayers
     );
+
   }
 
 
-  const sensFilter =
-    document.getElementById("sensFilter");
-
   if (sensFilter) {
+
     sensFilter.addEventListener(
       "change",
       filterPlayers
     );
+
   }
 
 
