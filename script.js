@@ -249,6 +249,7 @@ const players = [
     dpi: 1600,
     sens: 0.13,
     mouse: "G PRO X SUPERLIGHT 2",
+    mouseLink: "https://link.amazon/B06kH5b1r",
     mousepad: "ARTISAN 零 NINJA FX SOFT",
     scopedSens: 1.09
   },
