@@ -1,3 +1,4 @@
+```javascript
 const players = [
 
   // =========================
@@ -13,7 +14,6 @@ const players = [
     dpi: 800,
     sens: 0.185,
     mouse: "LAMZU Maya X Light Pink",
-    mouseLink: "https://link.amazon/B0ctMUcku",
     mousepad: "ARTISAN NINJA FX 99式 SOFT"
   },
 
@@ -26,7 +26,6 @@ const players = [
     dpi: 400,
     sens: 0.35,
     mouse: "Razer Viper V4 Pro",
-    mouseLink: "https://link.amazon/B0gImS1eE",
     mousepad: "ARTISAN NINJA FX Zero"
   },
 
@@ -39,7 +38,6 @@ const players = [
     dpi: 800,
     sens: 0.173,
     mouse: "Razer Viper V3 Pro",
-    mouseLink: "https://link.amazon/B02B5we6v",
     mousepad: "meiy glasspad"
   },
 
@@ -52,7 +50,6 @@ const players = [
     dpi: 800,
     sens: 0.211,
     mouse: "WLMOUSE Beast X Max",
-    mouseLink: "https://link.amazon/B0bpdmtk7",
     mousepad: "ARTISAN NINJA FX Hayate Otsu V2"
   },
 
@@ -281,7 +278,6 @@ const players = [
     dpi: 800,
     sens: 0.22,
     mouse: "Logicool G PRO X SUPERLIGHT 2",
-    mouseLink: "https://link.amazon/B06kH5b1r",
     mousepad: "Nachoneko × ふもコレ"
   },
 
@@ -294,7 +290,6 @@ const players = [
     dpi: 800,
     sens: 0.27,
     mouse: "Razer Viper V3 Pro",
-    mouseLink: "https://link.amazon/B02B5we6v",
     mousepad: "ARTISAN NINJA FX Zero"
   },
 
@@ -343,11 +338,56 @@ const players = [
     dpi: 800,
     sens: 0.175,
     mouse: "Razer Viper V4 Pro",
-    mouseLink: "https://link.amazon/B0gImS1eE",
     mousepad: "Pulsar eS Saturn Pro"
   }
 
 ];
+
+
+// =========================
+// Amazonアソシエイトリンク
+// =========================
+// 同じマウスなら同じリンクを使用
+
+const mouseLinks = {
+
+  "Logicool G PRO X SUPERLIGHT 2":
+    "https://link.amazon/B06kH5b1r",
+
+  "Razer Viper V3 Pro":
+    "https://link.amazon/B02B5we6v",
+
+  "Razer Viper V4 Pro":
+    "https://link.amazon/B0gImS1eE",
+
+  "LAMZU Maya X Light Pink":
+    "https://link.amazon/B0ctMUcku",
+
+  "WLMOUSE Beast X Max":
+    "https://link.amazon/B0bpdmtk7",
+
+  "G PRO X SUPERLIGHT 2":
+    "https://link.amazon/B06kH5b1r",
+
+  "G PRO X SUPERLIGHT":
+    "https://link.amazon/B06kH5b1r"
+
+};
+
+
+// =========================
+// Amazonリンク取得
+// =========================
+
+function getMouseLink(player) {
+
+  if (!player.mouse) {
+    return null;
+  }
+
+  return mouseLinks[player.mouse] || null;
+
+}
 
 
 // =========================
@@ -364,6 +404,7 @@ function getEDPI(player) {
   }
 
   return player.dpi * player.sens;
+
 }
 
 
@@ -502,30 +543,25 @@ function filterPlayers() {
       ? searchInput.value.toLowerCase()
       : "";
 
-
   const region =
     regionFilter
       ? regionFilter.value
       : "all";
-
 
   const country =
     countryFilter
       ? countryFilter.value
       : "all";
 
-
   const role =
     roleFilter
       ? roleFilter.value
       : "all";
 
-
   const edpiValue =
     edpiFilter
       ? edpiFilter.value
       : "all";
-
 
   const sensValue =
     sensFilter
@@ -584,7 +620,6 @@ function filterPlayers() {
 
       }
 
-
       if (edpiValue === "mid") {
 
         edpiMatch =
@@ -593,7 +628,6 @@ function filterPlayers() {
 
       }
 
-
       if (edpiValue === "high") {
 
         edpiMatch =
@@ -601,7 +635,6 @@ function filterPlayers() {
           edpi < 400;
 
       }
-
 
       if (edpiValue === "veryhigh") {
 
@@ -630,7 +663,6 @@ function filterPlayers() {
 
       }
 
-
       if (sensValue === "mid") {
 
         sensMatch =
@@ -639,7 +671,6 @@ function filterPlayers() {
 
       }
 
-
       if (sensValue === "high") {
 
         sensMatch =
@@ -647,7 +678,6 @@ function filterPlayers() {
           player.sens < 0.40;
 
       }
-
 
       if (sensValue === "veryhigh") {
 
@@ -753,7 +783,6 @@ function showPlayerDetail(playerName) {
   list.style.display =
     "none";
 
-
   detail.classList.remove(
     "hidden"
   );
@@ -786,14 +815,18 @@ function showPlayerDetail(playerName) {
   `;
 
 
-  if (player.mouseLink) {
+  const mouseLink =
+    getMouseLink(player);
+
+
+  if (mouseLink) {
 
     mouseHTML += `
 
       <br>
 
       <a
-        href="${player.mouseLink}"
+        href="${mouseLink}"
         target="_blank"
         rel="noopener noreferrer"
         class="amazon-button"
@@ -952,7 +985,6 @@ function closePlayerDetail() {
     "hidden"
   );
 
-
   list.style.display =
     "grid";
 
@@ -972,7 +1004,6 @@ document.addEventListener(
         "searchInput"
       );
 
-
     if (searchInput) {
 
       searchInput.addEventListener(
@@ -987,7 +1018,6 @@ document.addEventListener(
       document.getElementById(
         "regionFilter"
       );
-
 
     if (regionFilter) {
 
@@ -1004,7 +1034,6 @@ document.addEventListener(
         "countryFilter"
       );
 
-
     if (countryFilter) {
 
       countryFilter.addEventListener(
@@ -1019,7 +1048,6 @@ document.addEventListener(
       document.getElementById(
         "roleFilter"
       );
-
 
     if (roleFilter) {
 
@@ -1036,7 +1064,6 @@ document.addEventListener(
         "edpiFilter"
       );
 
-
     if (edpiFilter) {
 
       edpiFilter.addEventListener(
@@ -1051,7 +1078,6 @@ document.addEventListener(
       document.getElementById(
         "sensFilter"
       );
-
 
     if (sensFilter) {
 
@@ -1068,3 +1094,4 @@ document.addEventListener(
 
   }
 );
+```
