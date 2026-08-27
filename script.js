@@ -1,5 +1,5 @@
 // ========================================
-// VALO SENS - Player Database
+// NIKOPROSETTEI - VALORANT PRO SETTINGS
 // ========================================
 
 const players = [
@@ -254,7 +254,6 @@ const players = [
     scopedSens: 1.09
   },
 
-  // ★ Seoldam 修正版
   {
     name: "Seoldam",
     team: "RIDDLE ORDER",
@@ -349,7 +348,7 @@ const players = [
 
 
 // ========================================
-// eDPI
+// eDPI計算
 // ========================================
 
 function getEDPI(player) {
@@ -362,7 +361,7 @@ function getEDPI(player) {
 
 
 // ========================================
-// 選手一覧
+// 選手一覧表示
 // ========================================
 
 function renderPlayers(list) {
@@ -391,7 +390,6 @@ function renderPlayers(list) {
     return;
   }
 
-
   list.forEach(player => {
 
     const edpi = getEDPI(player);
@@ -400,11 +398,9 @@ function renderPlayers(list) {
 
     card.className = "player-card";
 
-
     card.addEventListener("click", () => {
       showPlayerDetail(player.name);
     });
-
 
     card.innerHTML = `
 
@@ -461,54 +457,37 @@ function renderPlayers(list) {
 
 function filterPlayers() {
 
-  const searchInput =
-    document.getElementById("searchInput");
-
-  const regionFilter =
-    document.getElementById("regionFilter");
-
-  const countryFilter =
-    document.getElementById("countryFilter");
-
-  const roleFilter =
-    document.getElementById("roleFilter");
-
-  const edpiFilter =
-    document.getElementById("edpiFilter");
-
-  const sensFilter =
-    document.getElementById("sensFilter");
-
+  const searchInput = document.getElementById("searchInput");
+  const regionFilter = document.getElementById("regionFilter");
+  const countryFilter = document.getElementById("countryFilter");
+  const roleFilter = document.getElementById("roleFilter");
+  const edpiFilter = document.getElementById("edpiFilter");
+  const sensFilter = document.getElementById("sensFilter");
 
   const search =
     searchInput
       ? searchInput.value.trim().toLowerCase()
       : "";
 
-
   const region =
     regionFilter
       ? regionFilter.value
       : "all";
-
 
   const country =
     countryFilter
       ? countryFilter.value
       : "all";
 
-
   const role =
     roleFilter
       ? roleFilter.value
       : "all";
 
-
   const edpiValue =
     edpiFilter
       ? edpiFilter.value
       : "all";
-
 
   const sensValue =
     sensFilter
@@ -520,22 +499,18 @@ function filterPlayers() {
 
     const edpi = getEDPI(player);
 
-
     const searchMatch =
       !search ||
       player.name.toLowerCase().includes(search) ||
       player.team.toLowerCase().includes(search);
 
-
     const regionMatch =
       region === "all" ||
       player.region === region;
 
-
     const countryMatch =
       country === "all" ||
       player.country === country;
-
 
     const roleMatch =
       role === "all" ||
@@ -544,77 +519,53 @@ function filterPlayers() {
 
     let edpiMatch = true;
 
-
     if (edpiValue === "low") {
-
       edpiMatch =
         edpi >= 100 &&
         edpi < 200;
-
     }
 
-
     if (edpiValue === "mid") {
-
       edpiMatch =
         edpi >= 200 &&
         edpi < 300;
-
     }
 
-
     if (edpiValue === "high") {
-
       edpiMatch =
         edpi >= 300 &&
         edpi < 400;
-
     }
 
-
     if (edpiValue === "veryhigh") {
-
       edpiMatch =
         edpi >= 400;
-
     }
 
 
     let sensMatch = true;
 
-
     if (sensValue === "low") {
-
       sensMatch =
         player.sens >= 0.10 &&
         player.sens < 0.20;
-
     }
 
-
     if (sensValue === "mid") {
-
       sensMatch =
         player.sens >= 0.20 &&
         player.sens < 0.30;
-
     }
 
-
     if (sensValue === "high") {
-
       sensMatch =
         player.sens >= 0.30 &&
         player.sens < 0.40;
-
     }
 
-
     if (sensValue === "veryhigh") {
-
       sensMatch =
         player.sens >= 0.40;
-
     }
 
 
@@ -658,31 +609,23 @@ function calculateEDPI() {
   const result =
     document.getElementById("edpiResult");
 
-
   if (!dpiInput || !sensInput || !result) {
     return;
   }
 
-
   const dpi =
     Number(dpiInput.value);
-
 
   const sens =
     Number(sensInput.value);
 
-
   if (!dpi || !sens) {
-
     result.textContent = "0.0";
-
     return;
   }
 
-
   const edpi =
     dpi * sens;
-
 
   result.textContent =
     edpi.toFixed(1);
@@ -700,9 +643,7 @@ function showPlayerDetail(playerName) {
       p => p.name === playerName
     );
 
-
   if (!player) return;
-
 
   const list =
     document.getElementById("playerList");
@@ -710,14 +651,11 @@ function showPlayerDetail(playerName) {
   const detail =
     document.getElementById("playerDetail");
 
-
   if (!list || !detail) return;
-
 
   list.style.display = "none";
 
   detail.classList.remove("hidden");
-
 
   const edpi =
     getEDPI(player);
@@ -861,9 +799,7 @@ function closePlayerDetail() {
   const detail =
     document.getElementById("playerDetail");
 
-
   if (!list || !detail) return;
-
 
   detail.classList.add("hidden");
 
@@ -897,62 +833,50 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   if (searchInput) {
-
     searchInput.addEventListener(
       "input",
       filterPlayers
     );
-
   }
 
 
   if (regionFilter) {
-
     regionFilter.addEventListener(
       "change",
       filterPlayers
     );
-
   }
 
 
   if (countryFilter) {
-
     countryFilter.addEventListener(
       "change",
       filterPlayers
     );
-
   }
 
 
   if (roleFilter) {
-
     roleFilter.addEventListener(
       "change",
       filterPlayers
     );
-
   }
 
 
   if (edpiFilter) {
-
     edpiFilter.addEventListener(
       "change",
       filterPlayers
     );
-
   }
 
 
   if (sensFilter) {
-
     sensFilter.addEventListener(
       "change",
       filterPlayers
     );
-
   }
 
 
