@@ -53,7 +53,8 @@ const players = [
     role: "Flex",
     dpi: 800,
     sens: 0.4,
-    mouse: "未登録",
+    mouse: "Logicool G PRO X SUPERSTRIKE",
+    mouseLink: "https://link.amazon/B02xPOHmz",
     mousepad: "未登録"
   },
 
