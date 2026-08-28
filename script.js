@@ -340,11 +340,35 @@ function getEDPI(player) {
 
 const playerPages = {
   "absol": "absol.html",
-  "SyouTa": "syouta.html",
+  "eko": "eko.html",
   "Laz": "laz.html",
+  "SyouTa": "syouta.html",
+  "SugarZ3ro": "sugarz3ro.html",
+  "xdll": "xdll.html",
+
+  "t3xture": "t3xture.html",
+  "something": "something.html",
+
+  "TenZ": "tenz.html",
+
+  "Akame": "akame.html",
+  "Caedye": "caedye.html",
   "Meiy": "meiy.html",
+  "SSeeS": "ssees.html",
+  "Yatsuka": "yatsuka.html",
+
+  "gyen": "gyen.html",
+  "joxjo": "joxjo.html",
+  "luca": "luca.html",
+  "minty": "minty.html",
   "Seoldam": "seoldam.html",
-  "TenZ": "tenz.html"
+
+  "Airy": "airy.html",
+  "daydus": "daydus.html",
+  "fukukeN": "fukuken.html",
+  "Hands": "hands.html",
+  "Mametu": "mametu.html",
+  "winnable": "winnable.html"
 };
 
 
