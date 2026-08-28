@@ -398,10 +398,10 @@ function renderPlayers(list) {
 
     card.className = "player-card";
 
-    card.addEventListener("click", () => {
-  window.location.href = `players/${player.name.toLowerCase()}.html`;
+   card.addEventListener("click", () => {
+  const fileName = player.name.toLowerCase();
+  window.location.href = `players/${fileName}.html`;
 });
-
     card.innerHTML = `
 
       <div class="player-name">
