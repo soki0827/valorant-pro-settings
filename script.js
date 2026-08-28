@@ -399,10 +399,16 @@ function renderPlayers(list) {
 
     card.className = "player-card";
 
-  ccard.addEventListener("click", () => {
+  card.addEventListener("click", () => {
 
-  if (player.name === "SyouTa") {
-    window.location.href = "players/syouta.html";
+  const pageNames = {
+    "SyouTa": "syouta.html"
+  };
+
+  const page = pageNames[player.name];
+
+  if (page) {
+    window.location.href = `players/${page}`;
   }
 
 });
