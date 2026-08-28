@@ -399,8 +399,8 @@ function renderPlayers(list) {
     card.className = "player-card";
 
     card.addEventListener("click", () => {
-      showPlayerDetail(player.name);
-    });
+  window.location.href = `players/${player.name.toLowerCase()}.html`;
+});
 
     card.innerHTML = `
 
