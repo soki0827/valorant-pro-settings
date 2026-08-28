@@ -402,9 +402,22 @@ function renderPlayers(list) {
   card.addEventListener("click", () => {
 
   const pageNames = {
-    "SyouTa": "syouta.html"
+    "absol": "absol.html",
+    "SyouTa": "syouta.html",
+    "Laz": "laz.html",
+    "Meiy": "meiy.html",
+    "Seoldam": "seoldam.html",
+    "TenZ": "tenz.html"
   };
 
+  const page = pageNames[player.name];
+
+  if (page) {
+    window.location.href =
+      `/valorant-pro-settings/players/${page}`;
+  }
+
+});
   const page = pageNames[player.name];
 
   if (page) {
