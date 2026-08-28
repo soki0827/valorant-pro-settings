@@ -1,221 +1,163 @@
-
 ```html
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
-
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <title>SyouTa | NIKOPROSETTEI</title>
 
-  <meta
-    name="description"
-    content="SyouTa選手のVALORANT感度、DPI、eDPI、マウス、マウスパッドなどの設定情報を掲載しています。"
-  >
+  <style>
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      background: #0b0d12;
+      color: white;
+      font-family: Arial, "Noto Sans JP", sans-serif;
+    }
 
-  <title>SyouTa 感度・DPI・eDPI・マウス設定 | NIKOPROSETTEI</title>
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
 
-  <link
-    rel="stylesheet"
-    href="../style.css"
-  >
+    .card {
+      background: #151922;
+      border: 1px solid #2a3040;
+      border-radius: 16px;
+      padding: 30px;
+    }
 
+    h1 {
+      margin-bottom: 5px;
+    }
+
+    .team {
+      color: #999;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .item {
+      background: #0f1219;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .label {
+      display: block;
+      color: #888;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    .value {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    a {
+      color: white;
+    }
+
+    .amazon {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 10px 15px;
+      background: #ff9900;
+      color: black;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 30px;
+      color: #aaa;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
-
 
 <body>
 
-  <header class="header">
-
-    <div class="header-inner">
-
-      <div class="logo">
-        VALORANT
-        <span>PRO SETTINGS</span>
-      </div>
-
-      <p class="subtitle">
-        NIKOPROSETTEI
-      </p>
-
-    </div>
-
-
-    <div class="site-title">
-
-      <h1>NIKOPROSETTEI</h1>
-
-      <p>
-        VALORANT プロ設定データベース
-      </p>
-
-    </div>
-
-  </header>
-
-
   <main class="container">
 
-    <section class="player-detail">
+    <div class="card">
 
-      <div class="detail-header">
+      <h1>🇯🇵 SyouTa</h1>
 
-        <div class="detail-name">
-          🇯🇵 SyouTa
+      <div class="team">
+        ZETA DIVISION
+      </div>
+
+      <div class="grid">
+
+        <div class="item">
+          <span class="label">ROLE</span>
+          <span class="value">Flex</span>
         </div>
 
-        <div class="detail-team">
-          ZETA DIVISION
+        <div class="item">
+          <span class="label">DPI</span>
+          <span class="value">800</span>
+        </div>
+
+        <div class="item">
+          <span class="label">SENSITIVITY</span>
+          <span class="value">0.4</span>
+        </div>
+
+        <div class="item">
+          <span class="label">eDPI</span>
+          <span class="value">320.0</span>
+        </div>
+
+        <div class="item">
+          <span class="label">MOUSE</span>
+          <span class="value">
+            Logicool G PRO X SUPERSTRIKE
+          </span>
+
+          <br>
+
+          <a
+            class="amazon"
+            href="https://link.amazon/B02xPOHmz"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Amazonで見る ↗
+          </a>
+        </div>
+
+        <div class="item">
+          <span class="label">MOUSEPAD</span>
+          <span class="value">未登録</span>
         </div>
 
       </div>
 
-
-      <div class="detail-section">
-
-        <h3>🎯 感度設定</h3>
-
-        <div class="detail-grid">
-
-          <div class="stat">
-
-            <span class="stat-label">
-              ROLE
-            </span>
-
-            <span class="stat-value">
-              Flex
-            </span>
-
-          </div>
-
-
-          <div class="stat">
-
-            <span class="stat-label">
-              DPI
-            </span>
-
-            <span class="stat-value">
-              800
-            </span>
-
-          </div>
-
-
-          <div class="stat">
-
-            <span class="stat-label">
-              SENSITIVITY
-            </span>
-
-            <span class="stat-value">
-              0.4
-            </span>
-
-          </div>
-
-
-          <div class="stat">
-
-            <span class="stat-label">
-              eDPI
-            </span>
-
-            <span class="stat-value">
-              320.0
-            </span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="detail-section">
-
-        <h3>🖱️ デバイス</h3>
-
-        <div class="detail-grid">
-
-
-          <div class="stat">
-
-            <span class="stat-label">
-              MOUSE
-            </span>
-
-            <span class="stat-value">
-
-              Logicool G PRO X SUPERSTRIKE
-
-              <br><br>
-
-              <a
-                href="https://link.amazon/B02xPOHmz"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="amazon-button"
-              >
-                Amazonで見る ↗
-              </a>
-
-            </span>
-
-          </div>
-
-
-          <div class="stat">
-
-            <span class="stat-label">
-              MOUSEPAD
-            </span>
-
-            <span class="stat-value">
-              未登録
-            </span>
-
-          </div>
-
-
-        </div>
-
-      </div>
-
-
-      <a
-        href="../index.html"
-        class="back-button"
-      >
+      <a class="back" href="../index.html">
         ← プロ一覧に戻る
       </a>
 
-    </section>
+    </div>
 
   </main>
-
-
-  <footer class="footer">
-
-    <p>
-      NIKOPROSETTEI
-    </p>
-
-    <p>
-      VALORANT PRO SETTINGS DATABASE
-    </p>
-
-    <p class="copyright">
-      © 2026 NIKOPROSETTEI
-    </p>
-
-  </footer>
-
 
 </body>
 
