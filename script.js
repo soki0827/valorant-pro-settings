@@ -399,8 +399,12 @@ function renderPlayers(list) {
 
     card.className = "player-card";
 
-  card.addEventListener("click", () => {
-  showPlayerDetail(player.name);
+  ccard.addEventListener("click", () => {
+
+  if (player.name === "SyouTa") {
+    window.location.href = "players/syouta.html";
+  }
+
 });
     card.innerHTML = `
 
