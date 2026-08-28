@@ -1,4 +1,3 @@
-```javascript
 // ========================================
 // NIKOPROSETTEI - VALORANT PRO SETTINGS
 // ========================================
@@ -681,4 +680,3 @@ document.addEventListener("DOMContentLoaded", () => {
   renderPlayers(players);
 
 });
-```
