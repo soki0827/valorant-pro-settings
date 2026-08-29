@@ -51,7 +51,7 @@ const players = [
     sens: 0.4,
     mouse: "Logicool G PRO X SUPERSTRIKE",
     mouseLink: "https://link.amazon/B02xPOHmz",
-    mousepad: "未登録"
+    mousepad: "Pulsar eS PD170"
   },
 
   {
@@ -62,8 +62,10 @@ const players = [
     role: "Controller",
     dpi: 800,
     sens: 0.225,
-    mouse: "未登録",
-    mousepad: "未登録"
+    mouse: "Logicool G PRO X SUPERLIGHT 2",
+    mouselink: "https://link.amazon/B02Oz92yt",
+    mousepad: "G-SR-SE ROUGE II",
+    mousepadlink: "https://link.amazon/B082gKoWa"
   },
 
   {
@@ -87,8 +89,9 @@ const players = [
     role: "Duelist",
     dpi: 800,
     sens: 0.45,
-    mouse: "未登録",
-    mousepad: "未登録"
+    mouse: "Logicool G PRO X SUPERLIGHT 2",
+    mousepad: "SteelSeries QCK heavy",
+    mousepadlink: "https://link.amazon/B0iJb2tMd"
   },
 
   {
@@ -99,8 +102,9 @@ const players = [
     role: "Duelist",
     dpi: 800,
     sens: 0.58,
-    mouse: "未登録",
-    mousepad: "未登録"
+    mouse: "Logicool G PRO X SUPERSTRIKE",
+    mouseLink: "https://link.amazon/B02xPOHmz",
+    mousepad: "eS Saturn Pro Gaming Mousepad"
   },
 
   {
@@ -109,10 +113,10 @@ const players = [
     region: "Americas",
     country: "🇨🇦",
     role: "Flex",
-    dpi: 800,
-    sens: 0.22,
-    mouse: "未登録",
-    mousepad: "未登録"
+    dpi: 1600,
+    sens: 0.196,
+    mouse: "Pulsar TenZ Signature Edition",
+    mousepad: "NINJA FX ZERO TENZ RED"
   },
 
   {
