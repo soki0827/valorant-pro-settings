@@ -206,7 +206,7 @@ const players = [
     sens: 0.355,
     mouse: "Logicool G PRO X SUPERLIGHT 2",
     mouseLink: "https://link.amazon/B06kH5b1r",
-    mousepad: "ARTISAN Hien FX XL"
+    mousepad: "ARTISAN NINJA FX 99式"
   },
 
   {
