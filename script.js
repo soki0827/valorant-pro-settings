@@ -3,11 +3,6 @@
 // ========================================
 
 const players = [
-
-  // =========================
-  // ZETA DIVISION
-  // =========================
-
   {
     name: "absol",
     team: "ZETA DIVISION",
@@ -86,11 +81,6 @@ const players = [
     mousepad: "Pulsar eS Saturn Pro"
   },
 
-
-  // =========================
-  // GEN.G
-  // =========================
-
   {
     name: "t3xture",
     team: "Gen.G",
@@ -103,11 +93,6 @@ const players = [
     mousepad: "SteelSeries QCK heavy",
     mousepadLink: "https://link.amazon/B0iJb2tMd"
   },
-
-
-  // =========================
-  // PAPER REX
-  // =========================
 
   {
     name: "something",
@@ -122,11 +107,6 @@ const players = [
     mousepad: "eS Saturn Pro Gaming Mousepad"
   },
 
-
-  // =========================
-  // SENTINELS
-  // =========================
-
   {
     name: "TenZ",
     team: "Sentinels",
@@ -138,11 +118,6 @@ const players = [
     mouse: "Pulsar TenZ Signature Edition",
     mousepad: "NINJA FX ZERO TENZ RED"
   },
-
-
-  // =========================
-  // DETONATION FOCUSME
-  // =========================
 
   {
     name: "Akame",
@@ -208,11 +183,6 @@ const players = [
     mousepad: "WALLHACK SP-004 Hatsune Miku"
   },
 
-
-  // =========================
-  // RIDDLE ORDER
-  // =========================
-
   {
     name: "gyen",
     team: "RIDDLE ORDER",
@@ -277,11 +247,6 @@ const players = [
     mouseLink: "https://link.amazon/B08qSNgo5",
     mousepad: "Pulsar Saturn Pro Red Soft"
   },
-
-
-  // =========================
-  // DELIGHT
-  // =========================
 
   {
     name: "Airy",
@@ -356,9 +321,7 @@ const players = [
     mouse: "未登録",
     mousepad: "未登録"
   }
-
 ];
-
 
 
 // ========================================
@@ -366,7 +329,6 @@ const players = [
 // ========================================
 
 function getEDPI(player) {
-
   if (!player.dpi || !player.sens) {
     return 0;
   }
@@ -375,64 +337,37 @@ function getEDPI(player) {
 }
 
 
-
 // ========================================
-// 選手専用ページ
+// 専用ページ設定
 // ========================================
 
 const playerPages = {
-
-  "absol": "absol.html",
-  "eko": "eko.html",
-  "Laz": "laz.html",
-  "SyouTa": "syouta.html",
-  "SugarZ3ro": "sugarz3ro.html",
-  "xdll": "xdll.html",
-
-  "t3xture": "t3xture.html",
-  "something": "something.html",
-
-  "TenZ": "tenz.html",
-
-  "Akame": "akame.html",
-  "Caedye": "caedye.html",
-  "Meiy": "meiy.html",
-  "SSeeS": "ssees.html",
-  "Yatsuka": "yatsuka.html",
-
-  "gyen": "gyen.html",
-  "joxjo": "joxjo.html",
-  "luca": "luca.html",
-  "minty": "minty.html",
-  "Seoldam": "seoldam.html",
-
-  "Airy": "airy.html",
-  "daydus": "daydus.html",
-  "fukukeN": "fukuken.html",
-  "Hands": "hands.html",
-  "Mametu": "mametu.html",
-  "winnable": "winnable.html"
-
+  absol: "absol.html",
+  eko: "eko.html",
+  Laz: "laz.html",
+  SyouTa: "syouta.html",
+  SugarZ3ro: "sugarz3ro.html",
+  xdll: "xdll.html",
+  t3xture: "t3xture.html",
+  something: "something.html",
+  TenZ: "tenz.html",
+  Akame: "akame.html",
+  Caedye: "caedye.html",
+  Meiy: "meiy.html",
+  SSeeS: "ssees.html",
+  Yatsuka: "yatsuka.html",
+  gyen: "gyen.html",
+  joxjo: "joxjo.html",
+  luca: "luca.html",
+  minty: "minty.html",
+  Seoldam: "seoldam.html",
+  Airy: "airy.html",
+  daydus: "daydus.html",
+  fukukeN: "fukuken.html",
+  Hands: "hands.html",
+  Mametu: "mametu.html",
+  winnable: "winnable.html"
 };
-
-
-
-// ========================================
-// 専用ページURL
-// ========================================
-
-function getPlayerPageURL(playerName) {
-
-  const page = playerPages[playerName];
-
-  if (!page) {
-    return null;
-  }
-
-  return `/valorant-pro-settings/players/${page}`;
-
-}
-
 
 
 // ========================================
@@ -440,100 +375,44 @@ function getPlayerPageURL(playerName) {
 // ========================================
 
 function renderPlayers(list) {
-
   const container = document.getElementById("playerList");
 
-  if (!container) {
-    return;
-  }
+  if (!container) return;
 
   container.innerHTML = "";
 
-
-
-  // 結果人数
-
-  const resultCount =
-    document.getElementById("resultCount");
+  const resultCount = document.getElementById("resultCount");
 
   if (resultCount) {
-
-    resultCount.textContent =
-      `${list.length}人`;
-
+    resultCount.textContent = `${list.length}人`;
   }
-
-
-
-  // 該当なし
 
   if (list.length === 0) {
-
     container.innerHTML = `
       <div class="no-results">
-
         <h3>選手が見つかりません</h3>
-
-        <p>
-          検索条件を変更してみてください。
-        </p>
-
+        <p>検索条件を変更してみてください。</p>
       </div>
     `;
-
     return;
-
   }
 
-
-
-  // 選手カード
-
   list.forEach(player => {
+    const edpi = getEDPI(player);
 
-    const edpi =
-      getEDPI(player);
+    const card = document.createElement("div");
+    card.className = "player-card";
 
+    if (playerPages[player.name]) {
+      card.style.cursor = "pointer";
 
-
-    const card =
-      document.createElement("div");
-
-    card.className =
-      "player-card";
-
-
-
-    // 専用ページがある選手
-
-    const pageURL =
-      getPlayerPageURL(player.name);
-
-
-
-    if (pageURL) {
-
-      card.style.cursor =
-        "pointer";
-
-
-
-      card.addEventListener(
-        "click",
-        () => {
-
-          window.location.href =
-            pageURL;
-
-        }
-      );
-
+      card.addEventListener("click", () => {
+        window.location.href =
+          `/valorant-pro-settings/players/${playerPages[player.name]}`;
+      });
     }
 
-
-
     card.innerHTML = `
-
       <div class="player-name">
         ${player.country} ${player.name}
       </div>
@@ -545,80 +424,39 @@ function renderPlayers(list) {
       <div class="player-info">
 
         <div class="stat">
-
-          <span class="stat-label">
-            ROLE
-          </span>
-
+          <span class="stat-label">ROLE</span>
           <span class="stat-value">
             ${player.role}
           </span>
-
         </div>
 
-
         <div class="stat">
-
-          <span class="stat-label">
-            DPI
-          </span>
-
+          <span class="stat-label">DPI</span>
           <span class="stat-value">
-            ${
-              player.dpi
-                ? player.dpi.toLocaleString()
-                : "未登録"
-            }
+            ${player.dpi ? player.dpi.toLocaleString() : "未登録"}
           </span>
-
         </div>
 
-
         <div class="stat">
-
-          <span class="stat-label">
-            SENS
-          </span>
-
+          <span class="stat-label">SENS</span>
           <span class="stat-value">
-            ${
-              player.sens
-                ? player.sens
-                : "未登録"
-            }
+            ${player.sens || "未登録"}
           </span>
-
         </div>
 
-
         <div class="stat">
-
-          <span class="stat-label">
-            eDPI
-          </span>
-
+          <span class="stat-label">eDPI</span>
           <span class="stat-value">
-            ${
-              edpi
-                ? edpi.toFixed(1)
-                : "未登録"
-            }
+            ${edpi ? edpi.toFixed(1) : "未登録"}
           </span>
-
         </div>
 
       </div>
-
     `;
 
-
-
     container.appendChild(card);
-
   });
-
 }
-
 
 
 // ========================================
@@ -626,251 +464,116 @@ function renderPlayers(list) {
 // ========================================
 
 function filterPlayers() {
-
-  const searchInput =
-    document.getElementById("searchInput");
-
-  const regionFilter =
-    document.getElementById("regionFilter");
-
-  const countryFilter =
-    document.getElementById("countryFilter");
-
-  const roleFilter =
-    document.getElementById("roleFilter");
-
-  const edpiFilter =
-    document.getElementById("edpiFilter");
-
-  const sensFilter =
-    document.getElementById("sensFilter");
-
-
-
-  const search =
-    searchInput
-      ? searchInput.value
-          .trim()
-          .toLowerCase()
-      : "";
-
-
-
-  const region =
-    regionFilter
-      ? regionFilter.value
-      : "all";
-
-
-
-  const country =
-    countryFilter
-      ? countryFilter.value
-      : "all";
-
-
-
-  const role =
-    roleFilter
-      ? roleFilter.value
-      : "all";
-
-
-
-  const edpiValue =
-    edpiFilter
-      ? edpiFilter.value
-      : "all";
-
-
-
-  const sensValue =
-    sensFilter
-      ? sensFilter.value
-      : "all";
-
-
-
-  const filtered =
-    players.filter(player => {
-
-      const edpi =
-        getEDPI(player);
-
-
-
-      // -------------------------
-      // 検索
-      // -------------------------
-
-      const searchMatch =
-        !search ||
-
-        player.name
-          .toLowerCase()
-          .includes(search) ||
-
-        player.team
-          .toLowerCase()
-          .includes(search);
-
-
-
-      // -------------------------
-      // Region
-      // -------------------------
-
-      const regionMatch =
-        region === "all" ||
-        player.region === region;
-
-
-
-      // -------------------------
-      // Country
-      // -------------------------
-
-      const countryMatch =
-        country === "all" ||
-        player.country === country;
-
-
-
-      // -------------------------
-      // Role
-      // -------------------------
-
-      const roleMatch =
-        role === "all" ||
-        player.role === role;
-
-
-
-      // -------------------------
-      // eDPI
-      // -------------------------
-
-      let edpiMatch = true;
-
-
-
-      if (edpiValue === "low") {
-
-        edpiMatch =
-          edpi >= 100 &&
-          edpi < 200;
-
-      }
-
-
-
-      if (edpiValue === "mid") {
-
-        edpiMatch =
-          edpi >= 200 &&
-          edpi < 300;
-
-      }
-
-
-
-      if (edpiValue === "high") {
-
-        edpiMatch =
-          edpi >= 300 &&
-          edpi < 400;
-
-      }
-
-
-
-      if (edpiValue === "veryhigh") {
-
-        edpiMatch =
-          edpi >= 400;
-
-      }
-
-
-
-      // -------------------------
-      // Sensitivity
-      // -------------------------
-
-      let sensMatch = true;
-
-
-
-      if (sensValue === "low") {
-
-        sensMatch =
-          player.sens >= 0.10 &&
-          player.sens < 0.20;
-
-      }
-
-
-
-      if (sensValue === "mid") {
-
-        sensMatch =
-          player.sens >= 0.20 &&
-          player.sens < 0.30;
-
-      }
-
-
-
-      if (sensValue === "high") {
-
-        sensMatch =
-          player.sens >= 0.30 &&
-          player.sens < 0.40;
-
-      }
-
-
-
-      if (sensValue === "veryhigh") {
-
-        sensMatch =
-          player.sens >= 0.40;
-
-      }
-
-
-
-      return (
-
-        searchMatch &&
-        regionMatch &&
-        countryMatch &&
-        roleMatch &&
-        edpiMatch &&
-        sensMatch
-
-      );
-
-    });
-
-
+  const searchInput = document.getElementById("searchInput");
+  const regionFilter = document.getElementById("regionFilter");
+  const countryFilter = document.getElementById("countryFilter");
+  const roleFilter = document.getElementById("roleFilter");
+  const edpiFilter = document.getElementById("edpiFilter");
+  const sensFilter = document.getElementById("sensFilter");
+
+  const search = searchInput
+    ? searchInput.value.trim().toLowerCase()
+    : "";
+
+  const region = regionFilter
+    ? regionFilter.value
+    : "all";
+
+  const country = countryFilter
+    ? countryFilter.value
+    : "all";
+
+  const role = roleFilter
+    ? roleFilter.value
+    : "all";
+
+  const edpiValue = edpiFilter
+    ? edpiFilter.value
+    : "all";
+
+  const sensValue = sensFilter
+    ? sensFilter.value
+    : "all";
+
+
+  const filtered = players.filter(player => {
+    const edpi = getEDPI(player);
+
+    const searchMatch =
+      !search ||
+      player.name.toLowerCase().includes(search) ||
+      player.team.toLowerCase().includes(search);
+
+    const regionMatch =
+      region === "all" ||
+      player.region === region;
+
+    const countryMatch =
+      country === "all" ||
+      player.country === country;
+
+    const roleMatch =
+      role === "all" ||
+      player.role === role;
+
+
+    let edpiMatch = true;
+
+    if (edpiValue === "low") {
+      edpiMatch = edpi >= 100 && edpi < 200;
+    }
+
+    if (edpiValue === "mid") {
+      edpiMatch = edpi >= 200 && edpi < 300;
+    }
+
+    if (edpiValue === "high") {
+      edpiMatch = edpi >= 300 && edpi < 400;
+    }
+
+    if (edpiValue === "veryhigh") {
+      edpiMatch = edpi >= 400;
+    }
+
+
+    let sensMatch = true;
+
+    if (sensValue === "low") {
+      sensMatch =
+        player.sens >= 0.10 &&
+        player.sens < 0.20;
+    }
+
+    if (sensValue === "mid") {
+      sensMatch =
+        player.sens >= 0.20 &&
+        player.sens < 0.30;
+    }
+
+    if (sensValue === "high") {
+      sensMatch =
+        player.sens >= 0.30 &&
+        player.sens < 0.40;
+    }
+
+    if (sensValue === "veryhigh") {
+      sensMatch =
+        player.sens >= 0.40;
+    }
+
+
+    return (
+      searchMatch &&
+      regionMatch &&
+      countryMatch &&
+      roleMatch &&
+      edpiMatch &&
+      sensMatch
+    );
+  });
 
   renderPlayers(filtered);
-
 }
-
-
-
-// ========================================
-// 検索
-// ========================================
-
-function searchPlayers() {
-
-  filterPlayers();
-
-}
-
 
 
 // ========================================
@@ -878,196 +581,64 @@ function searchPlayers() {
 // ========================================
 
 function calculateEDPI() {
+  const dpiInput = document.getElementById("dpiInput");
+  const sensInput = document.getElementById("sensInput");
+  const result = document.getElementById("edpiResult");
 
-  const dpiInput =
-    document.getElementById("dpiInput");
-
-  const sensInput =
-    document.getElementById("sensInput");
-
-  const result =
-    document.getElementById("edpiResult");
-
-
-
-  if (
-    !dpiInput ||
-    !sensInput ||
-    !result
-  ) {
-
+  if (!dpiInput || !sensInput || !result) {
     return;
-
   }
 
-
-
-  const dpi =
-    Number(dpiInput.value);
-
-  const sens =
-    Number(sensInput.value);
-
-
+  const dpi = Number(dpiInput.value);
+  const sens = Number(sensInput.value);
 
   if (!dpi || !sens) {
-
-    result.textContent =
-      "0.0";
-
+    result.textContent = "0.0";
     return;
-
   }
 
+  const edpi = dpi * sens;
 
-
-  const edpi =
-    dpi * sens;
-
-
-
-  result.textContent =
-    edpi.toFixed(1);
-
+  result.textContent = edpi.toFixed(1);
 }
-
 
 
 // ========================================
 // 初期化
 // ========================================
 
-document.addEventListener(
-  "DOMContentLoaded",
-  () => {
+document.addEventListener("DOMContentLoaded", () => {
 
-    const searchInput =
-      document.getElementById(
-        "searchInput"
-      );
+  const searchInput = document.getElementById("searchInput");
+  const regionFilter = document.getElementById("regionFilter");
+  const countryFilter = document.getElementById("countryFilter");
+  const roleFilter = document.getElementById("roleFilter");
+  const edpiFilter = document.getElementById("edpiFilter");
+  const sensFilter = document.getElementById("sensFilter");
 
-    const regionFilter =
-      document.getElementById(
-        "regionFilter"
-      );
-
-    const countryFilter =
-      document.getElementById(
-        "countryFilter"
-      );
-
-    const roleFilter =
-      document.getElementById(
-        "roleFilter"
-      );
-
-    const edpiFilter =
-      document.getElementById(
-        "edpiFilter"
-      );
-
-    const sensFilter =
-      document.getElementById(
-        "sensFilter"
-      );
-
-
-
-    // -------------------------
-    // 検索
-    // -------------------------
-
-    if (searchInput) {
-
-      searchInput.addEventListener(
-        "input",
-        filterPlayers
-      );
-
-    }
-
-
-
-    // -------------------------
-    // Region
-    // -------------------------
-
-    if (regionFilter) {
-
-      regionFilter.addEventListener(
-        "change",
-        filterPlayers
-      );
-
-    }
-
-
-
-    // -------------------------
-    // Country
-    // -------------------------
-
-    if (countryFilter) {
-
-      countryFilter.addEventListener(
-        "change",
-        filterPlayers
-      );
-
-    }
-
-
-
-    // -------------------------
-    // Role
-    // -------------------------
-
-    if (roleFilter) {
-
-      roleFilter.addEventListener(
-        "change",
-        filterPlayers
-      );
-
-    }
-
-
-
-    // -------------------------
-    // eDPI
-    // -------------------------
-
-    if (edpiFilter) {
-
-      edpiFilter.addEventListener(
-        "change",
-        filterPlayers
-      );
-
-    }
-
-
-
-    // -------------------------
-    // Sens
-    // -------------------------
-
-    if (sensFilter) {
-
-      sensFilter.addEventListener(
-        "change",
-        filterPlayers
-      );
-
-    }
-
-
-
-    // -------------------------
-    // 初期表示
-    // -------------------------
-
-    renderPlayers(players);
-
+  if (searchInput) {
+    searchInput.addEventListener("input", filterPlayers);
   }
-);
+
+  if (regionFilter) {
+    regionFilter.addEventListener("change", filterPlayers);
+  }
+
+  if (countryFilter) {
+    countryFilter.addEventListener("change", filterPlayers);
+  }
+
+  if (roleFilter) {
+    roleFilter.addEventListener("change", filterPlayers);
+  }
+
+  if (edpiFilter) {
+    edpiFilter.addEventListener("change", filterPlayers);
+  }
+
+  if (sensFilter) {
+    sensFilter.addEventListener("change", filterPlayers);
+  }
+
+  renderPlayers(players);
+});
