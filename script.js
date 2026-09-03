@@ -35,10 +35,10 @@ const players = [
     region: "Pacific",
     country: "🇯🇵",
     role: "未登録",
-    dpi: 1600,
-    sens: 0.136,
-    mouse: "未登録",
-    mousepad: "未登録"
+    dpi: 400,
+    sens: 0.545,
+    mouse: "VAXEE NP-01S V3",
+    mousepad: "VAXEE PD+ 155"
   },
 
   {
