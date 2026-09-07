@@ -49,7 +49,7 @@ const players = [
     role: "Flex",
     dpi: 800,
     sens: 0.4,
-    mouse: "Logicool G PRO X SUPERSTRIKE",
+    mouse: "Logicool G PRO X2 SUPERSTRIKE",
     mouseLink: "https://link.amazon/B02xPOHmz",
     mousepad: "Pulsar eS PD170"
   },
@@ -102,7 +102,7 @@ const players = [
     role: "Duelist",
     dpi: 800,
     sens: 0.58,
-    mouse: "Logicool G PRO X SUPERSTRIKE",
+    mouse: "Logicool G PRO X2 SUPERSTRIKE",
     mouseLink: "https://link.amazon/B02xPOHmz",
     mousepad: "eS Saturn Pro Gaming Mousepad"
   },
@@ -229,7 +229,7 @@ const players = [
     role: "Controller",
     dpi: 1600,
     sens: 0.13,
-    mouse: "G PRO X SUPERLIGHT 2",
+    mouse: "Logicool G PRO X SUPERLIGHT 2",
     mouseLink: "https://link.amazon/B06kH5b1r",
     mousepad: "ARTISAN 零 NINJA FX SOFT",
     scopedSens: 1.09
