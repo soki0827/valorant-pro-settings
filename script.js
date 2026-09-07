@@ -129,7 +129,7 @@ const players = [
     sens: 0.185,
     mouse: "LAMZU Maya X Light Pink",
     mouseLink: "https://link.amazon/B0ctMUcku",
-    mousepad: "ARTISAN NINJA FX 99式 SOFT"
+    mousepad: "ARTISAN NINJA FX 99式"
   },
 
   {
@@ -231,7 +231,7 @@ const players = [
     sens: 0.13,
     mouse: "Logicool G PRO X SUPERLIGHT 2",
     mouseLink: "https://link.amazon/B06kH5b1r",
-    mousepad: "ARTISAN 零 NINJA FX SOFT",
+    mousepad: "ARTISAN NINJA FX Zero",
     scopedSens: 1.09
   },
 
@@ -307,7 +307,7 @@ const players = [
     sens: 0.2,
     mouse: "Logicool G PRO X SUPERLIGHT 2",
     mouseLink: "https://link.amazon/B06kH5b1r",
-    mousepad: "ARTISAN 零 FX SOFT 橙XL"
+    mousepad: "ARTISAN NINJA FX Zero"
   },
 
   {
