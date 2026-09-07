@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="NIKOPROSETTEIのVALORANTプロ選手データから平均eDPI、人気マウス、人気マウスパッドを集計しています。"
+  >
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="favicon.png"
+  >
+
+  <title>
+    統計・ランキング | NIKOPROSETTEI
+  </title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      background: #0b0d12;
+      color: white;
+      font-family:
+        Arial,
+        "Noto Sans JP",
+        sans-serif;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .header h1 {
+      margin: 0 0 10px;
+      font-size: 32px;
+    }
+
+    .header p {
+      margin: 0;
+      color: #888;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 30px;
+      color: #aaa;
+      text-decoration: none;
+    }
+
+    .back:hover {
+      color: white;
+    }
+
+    .section-title {
+      margin-bottom: 20px;
+    }
+
+    .section-title h2 {
+      margin: 0 0 8px;
+      font-size: 22px;
+    }
+
+    .section-title p {
+      margin: 0;
+      color: #888;
+      font-size: 14px;
+    }
+
+    .statistics {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-bottom: 50px;
+    }
+
+    .stat-card {
+      background: #151922;
+      border: 1px solid #2a3040;
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .stat-label {
+      display: block;
+      color: #888;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    .stat-value {
+      display: block;
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    .stat-unit {
+      color: #888;
+      font-size: 14px;
+      margin-left: 4px;
+    }
+
+    .ranking-section {
+      margin-bottom: 50px;
+    }
+
+    .ranking-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .ranking-item {
+      display: grid;
+      grid-template-columns: 60px 1fr auto;
+      align-items: center;
+      gap: 15px;
+
+      background: #151922;
+      border: 1px solid #2a3040;
+      border-radius: 12px;
+      padding: 18px 20px;
+    }
+
+    .rank {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .rank-name {
+      font-weight: bold;
+    }
+
+    .rank-count {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .empty {
+      background: #151922;
+      border: 1px solid #2a3040;
+      border-radius: 12px;
+      padding: 25px;
+      color: #888;
+      text-align: center;
+    }
+
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 1px solid #2a3040;
+      text-align: center;
+      color: #777;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+
+      body {
+        padding: 25px 15px;
+      }
+
+      .header h1 {
+        font-size: 26px;
+      }
+
+      .statistics {
+        grid-template-columns: 1fr;
+      }
+
+      .stat-value {
+        font-size: 32px;
+      }
+
+      .ranking-item {
+        grid-template-columns: 45px 1fr auto;
+        padding: 15px;
+      }
+
+      .rank {
+        font-size: 17px;
+      }
+
+      .rank-name {
+        font-size: 14px;
+      }
+
+      .rank-count {
+        font-size: 12px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+  <main class="container">
+
+    <a
+      href="index.html"
+      class="back"
+    >
+      ← 選手一覧に戻る
+    </a>
+
+
+    <header class="header">
+
+      <h1>
+        NIKOPROSETTEI
+      </h1>
+
+      <p>
+        VALORANT PRO SETTINGS STATISTICS
+      </p>
+
+    </header>
+
+
+    <!-- ========================= -->
+    <!-- 統計 -->
+    <!-- ========================= -->
+
+    <section>
+
+      <div class="section-title">
+
+        <h2>
+          📊 PLAYER STATISTICS
+        </h2>
+
+        <p>
+          登録されているプロ選手のデータを集計しています。
+        </p>
+
+      </div>
+
+
+      <div class="statistics">
+
+        <div class="stat-card">
+
+          <span class="stat-label">
+            登録選手
+          </span>
+
+          <span
+            id="playerCount"
+            class="stat-value"
+          >
+            0
+          </span>
+
+          <span class="stat-unit">
+            人
+          </span>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <span class="stat-label">
+            平均eDPI
+          </span>
+
+          <span
+            id="averageEDPI"
+            class="stat-value"
+          >
+            0.0
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- マウスランキング -->
+    <!-- ========================= -->
+
+    <section class="ranking-section">
+
+      <div class="section-title">
+
+        <h2>
+          🖱️ 人気マウスランキング
+        </h2>
+
+        <p>
+          プロ選手の使用人数が多い順
+        </p>
+
+      </div>
+
+
+      <div
+        id="mouseRanking"
+        class="ranking-list"
+      ></div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- マウスパッドランキング -->
+    <!-- ========================= -->
+
+    <section class="ranking-section">
+
+      <div class="section-title">
+
+        <h2>
+          🖱️ 人気マウスパッドランキング
+        </h2>
+
+        <p>
+          プロ選手の使用人数が多い順
+        </p>
+
+      </div>
+
+
+      <div
+        id="mousepadRanking"
+        class="ranking-list"
+      ></div>
+
+    </section>
+
+
+    <footer class="footer">
+
+      <p>
+        NIKOPROSETTEI
+      </p>
+
+      <p>
+        VALORANT PRO SETTINGS DATABASE
+      </p>
+
+      <p>
+        © 2026 NIKOPROSETTEI
+      </p>
+
+    </footer>
+
+  </main>
+
+
+  <script src="script.js"></script>
+
+  <script>
+
+    // ========================================
+    // 統計ページ
+    // ========================================
+
+    function renderStatistics() {
+
+      // 登録選手数
+      const playerCount =
+        document.getElementById("playerCount");
+
+      if (playerCount) {
+        playerCount.textContent = players.length;
+      }
+
+
+      // ========================================
+      // 平均eDPI
+      // ========================================
+
+      const validEDPIPlayers =
+        players.filter(player => {
+          return player.dpi > 0 && player.sens > 0;
+        });
+
+      const averageEDPI =
+        validEDPIPlayers.length > 0
+          ? validEDPIPlayers.reduce(
+              (total, player) => {
+                return total + getEDPI(player);
+              },
+              0
+            ) / validEDPIPlayers.length
+          : 0;
+
+      const averageElement =
+        document.getElementById("averageEDPI");
+
+      if (averageElement) {
+        averageElement.textContent =
+          averageEDPI.toFixed(1);
+      }
+
+
+      // ========================================
+      // マウスランキング
+      // ========================================
+
+      renderRanking(
+        "mouseRanking",
+        "mouse"
+      );
+
+
+      // ========================================
+      // マウスパッドランキング
+      // ========================================
+
+      renderRanking(
+        "mousepadRanking",
+        "mousepad"
+      );
+
+    }
+
+
+
+    // ========================================
+    // ランキング生成
+    // ========================================
+
+    function renderRanking(elementId, property) {
+
+      const container =
+        document.getElementById(elementId);
+
+      if (!container) return;
+
+      const counts = {};
+
+      players.forEach(player => {
+
+        const value = player[property];
+
+        if (
+          !value ||
+          value === "未登録"
+        ) {
+          return;
+        }
+
+        counts[value] =
+          (counts[value] || 0) + 1;
+
+      });
+
+
+      const ranking =
+        Object.entries(counts)
+          .sort((a, b) => b[1] - a[1]);
+
+
+      container.innerHTML = "";
+
+
+      if (ranking.length === 0) {
+
+        container.innerHTML = `
+          <div class="empty">
+            データがありません。
+          </div>
+        `;
+
+        return;
+      }
+
+
+      ranking.forEach(
+        ([name, count], index) => {
+
+          const item =
+            document.createElement("div");
+
+          item.className =
+            "ranking-item";
+
+
+          let rankText =
+            `${index + 1}位`;
+
+          if (index === 0) {
+            rankText = "🥇";
+          }
+
+          if (index === 1) {
+            rankText = "🥈";
+          }
+
+          if (index === 2) {
+            rankText = "🥉";
+          }
+
+
+          item.innerHTML = `
+
+            <div class="rank">
+              ${rankText}
+            </div>
+
+            <div class="rank-name">
+              ${name}
+            </div>
+
+            <div class="rank-count">
+              ${count}人
+            </div>
+
+          `;
+
+
+          container.appendChild(item);
+
+        }
+      );
+
+    }
+
+
+
+    // ========================================
+    // 初期化
+    // ========================================
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      renderStatistics
+    );
+
+  </script>
+
+</body>
+
+</html>
