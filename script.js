@@ -104,7 +104,7 @@ const players = [
     sens: 0.58,
     mouse: "Logicool G PRO X2 SUPERSTRIKE",
     mouseLink: "https://link.amazon/B02xPOHmz",
-    mousepad: "eS Saturn Pro Gaming Mousepad"
+    mousepad: "Pulsar eS Saturn Pro"
   },
 
   {
